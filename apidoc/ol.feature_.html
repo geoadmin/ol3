@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>OpenLayers 3 API Documentation - Class: ol.layer.Vector</title>
+    <title>OpenLayers 3 API Documentation - Namespace: ol.feature</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -36,9 +36,9 @@
     
 <header>
     <h2>
-        <span class="ancestors"><a href="ol.html">ol</a><a href="ol.layer.html">.layer</a>.</span>
+        <span class="ancestors"><a href="ol.html">ol</a>.</span>
     
-    ol.layer.Vector
+    ol.feature
     </h2>
     
 </header>  
@@ -49,85 +49,8 @@
     
     
         
-<dt>
-    <h4 class="name" id="Vector"><span class="type-signature"></span>new Vector</h4>
-    
-    
-<div class="stability stability-experimental">Stability: experimental</div>
-
-
-
-    
-</dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
         
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		<th>Argument</th>
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="olx.layer.html#VectorOptions">olx.layer.VectorOptions</a></span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Options.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
+        
 <dl class="details">
     
         
@@ -149,7 +72,7 @@
 	
 	
 	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>vectorlayer.js, line 23</li></ul></dd>
+	<dd class="tag-source"><ul class="dummy"><li>feature.jsdoc, line 1</li></ul></dd>
 	
     
     
@@ -159,26 +82,12 @@
 	
 </dl>
 
-    
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
+        
+        
     
     </div>
     
     
-        <h3 class="subsection-title">Extends</h3>
-        
-        <ul>
-            <li><a href="ol.layer.Layer.html">ol.layer.Layer</a></li>
-        </ul>
-    
     
     
     
@@ -193,12 +102,14 @@
     
     
     
-        <h3 class="subsection-title">Methods</h3>
+    
+    
+        <h3 class="subsection-title">TypeDefs</h3>
         
         <dl>
             
-<dt>
-    <h4 class="name" id="getRenderGeometryFunctions"><span class="type-signature"></span>getRenderGeometryFunctions</h4>
+<dt class="">
+    <h4 class="name" id="FeatureStyleFunction">FeatureStyleFunction</h4>
     
     
 <div class="stability stability-experimental">Stability: experimental</div>
@@ -207,14 +118,7 @@
 
     
 </dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
+<dd class="">
     
     
     
@@ -239,7 +143,7 @@
 	
 	
 	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>vectorlayer.js, line 43</li></ul></dd>
+	<dd class="tag-source"><ul class="dummy"><li>feature.js, line 209</li></ul></dd>
 	
     
     
@@ -249,45 +153,14 @@
 	
 </dl>
 
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>Render geometry functions.</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type"><a href="ol.Collection.html">ol.Collection</a></span>
-|
-
-<span class="param-type">undefined</span>
-
-
-	</dd>
-</dl>
-
-        
     
     
 </dd>
 
         
             
-<dt>
-    <h4 class="name" id="getSource"><span class="type-signature"></span>getSource</h4>
+<dt class="">
+    <h4 class="name" id="StyleFunction">StyleFunction</h4>
     
     
 <div class="stability stability-experimental">Stability: experimental</div>
@@ -296,105 +169,7 @@
 
     
 </dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-
-	
-	<dt class="inherited-from">Inherited From:</dt>
-	<dd class="inherited-from"><ul class="dummy"><li>
-		<a href="ol.layer.Layer.html#getSource">ol.layer.Layer#getSource</a>
-	</li></dd>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>layer.js, line 76</li></ul></dd>
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>Source.</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type"><a href="ol.source.Source.html">ol.source.Source</a></span>
-
-
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="getStyleFunction"><span class="type-signature"></span>getStyleFunction</h4>
-    
-    
-<div class="stability stability-experimental">Stability: experimental</div>
-
-
-
-    
-</dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
+<dd class="">
     
     
     
@@ -419,7 +194,7 @@
 	
 	
 	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>vectorlayer.js, line 57</li></ul></dd>
+	<dd class="tag-source"><ul class="dummy"><li>feature.js, line 225</li></ul></dd>
 	
     
     
@@ -429,281 +204,11 @@
 	
 </dl>
 
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>Style function.</p>
-</div>
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-<span class="param-type"><a href="ol.feature_.html#StyleFunction">ol.feature.StyleFunction</a></span>
-|
-
-<span class="param-type">undefined</span>
-
-
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="setRenderGeometryFunctions"><span class="type-signature"></span>setRenderGeometryFunctions</h4>
-    
-    
-<div class="stability stability-experimental">Stability: experimental</div>
-
-
-
-    
-</dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>renderGeometryFunctions</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ol.Collection.html">ol.Collection</a></span>
-|
-
-<span class="param-type">undefined</span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>Render geometry
-    functions.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>vectorlayer.js, line 72</li></ul></dd>
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="setStyleFunction"><span class="type-signature"></span>setStyleFunction</h4>
-    
-    
-<div class="stability stability-experimental">Stability: experimental</div>
-
-
-
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>If the styles are changed by setting a new style function or by changing the
-value returned by the style function then <code>dispatchChangeEvent</code> should be
-called on the layer for the layer to be refreshed on the screen.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>styleFunction</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ol.feature_.html#StyleFunction">ol.feature.StyleFunction</a></span>
-|
-
-<span class="param-type">undefined</span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>Style function.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source"><ul class="dummy"><li>vectorlayer.js, line 90</li></ul></dd>
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
     
     
 </dd>
 
         </dl>
-    
-    
     
     
     
