@@ -2113,6 +2113,63 @@ function getConfig(){ return {
     ], 
     "type": "wmts"
   }, 
+  "ch.bfs.arealstatistik-bodennutzung": {
+    "attribution": "FSO", 
+    "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/en/index.html", 
+    "background": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Arealstatistik 2004/09 NOLU04", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "serverLayerName": "ch.bfs.arealstatistik-bodennutzung", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20131121"
+    ], 
+    "type": "wmts"
+  }, 
+  "ch.bfs.arealstatistik-bodennutzung-1985": {
+    "attribution": "FSO", 
+    "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/en/index.html", 
+    "background": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Arealstatistik 1979/85 NOLU04", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "serverLayerName": "ch.bfs.arealstatistik-bodennutzung-1985", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20131121"
+    ], 
+    "type": "wmts"
+  }, 
+  "ch.bfs.arealstatistik-bodennutzung-1997": {
+    "attribution": "FSO", 
+    "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/en/index.html", 
+    "background": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Arealstatistik 1992/97 NOLU04", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "serverLayerName": "ch.bfs.arealstatistik-bodennutzung-1997", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20131121"
+    ], 
+    "type": "wmts"
+  }, 
   "ch.bfs.arealstatistik-hintergrund": {
     "attribution": "FSO", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/en/index.html", 
