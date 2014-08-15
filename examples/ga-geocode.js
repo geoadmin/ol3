@@ -2,7 +2,8 @@ goog.require('ga.Map');
 goog.require('ga.layer');
 goog.require('ol.View2D');
 
-
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
 ga.Lang.setCode('de');
 
 // Create a GeoAdmin Map

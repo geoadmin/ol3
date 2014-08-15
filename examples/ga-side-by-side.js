@@ -3,6 +3,8 @@ goog.require('ga.layer');
 goog.require('ol.BrowserFeature');
 goog.require('ol.View2D');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
 
 var canvasMap = new ga.Map({
   target: 'canvasMap',

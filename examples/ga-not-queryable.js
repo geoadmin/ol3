@@ -4,6 +4,8 @@ goog.require('ol.View2D');
 goog.require('ol.layer.Vector');
 goog.require('ol.source.KML');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
 
 // Create a GeoAdmin Map
 var map = new ga.Map({

@@ -10,6 +10,9 @@ goog.require('ol.proj.Projection');
 goog.require('ol.source.TileImage');
 goog.require('ol.tilegrid.TileGrid');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
+
 var width = 8954;
 var height = 9525;
 var imgName = '19701930012114';

@@ -32,6 +32,9 @@ goog.require('ol.geom.MultiLineString');
 goog.require('ol.geom.MultiPolygon');
 goog.require('ol.geom.GeometryCollection');
 
+goog.require('ga.Lang');
+goog.require('ga.ServiceUrl');
+
 /**
  * @constructor
  * @extends {goog.Disposable}
@@ -134,7 +137,7 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
   var size = this.map_.getSize();
   var extent = this.map_.getView().getView2D().calculateExtent(size);
   var jsonp = new goog.net.Jsonp(
-    new goog.Uri( window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/identify'),
+    new goog.Uri( ga.getServiceUrl() + '/rest/services/api/MapServer/identify'),
       'callback');
   var layerList = new Array();
   var layer;
@@ -154,8 +157,7 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
       'mapExtent': extent.join(','),
       'tolerance': 10,
       'layers': 'all:' + layerList.join(','),
-      'lang': window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-        window['GeoAdmin']['lang'] : "de"
+      'lang': ga.Lang.getCode()
     };
     jsonp.send(payload,
       goog.bind(this.handleIdentifyResponse_, this),
@@ -202,10 +204,9 @@ ga.Tooltip.prototype.handleIdentifyResponse_ = function(response) {
 
   // Show popup
   for (var i = 0, ii = response['results'].length; i < ii; i++) {
-    var lang = window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-                window['GeoAdmin']['lang'] : "de";
+    var lang = ga.Lang.getCode();
     var jsonp = new goog.net.Jsonp(
-      new goog.Uri( window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/' +
+      new goog.Uri( ga.getServiceUrl() + '/rest/services/api/MapServer/' +
         response['results'][i]['layerBodId'] + '/' +
         response['results'][i]['featureId'] + '/' +
         'htmlPopup?lang=' + lang),

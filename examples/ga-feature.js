@@ -2,6 +2,9 @@ goog.require('ga.Map');
 goog.require('ga.layer');
 goog.require('ol.View2D');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
+
 // Create a GeoAdmin Map
 var map = new ga.Map({
   // Define the div where the map is placed

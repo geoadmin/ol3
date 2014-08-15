@@ -11,8 +11,7 @@ ga.Lang = {};
 /**
  * @type {string}
  */
-ga.Lang.code_ = window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-  window['GeoAdmin']['lang'] : "de";
+ga.Lang.code_ = 'de';
 
 
 /**
@@ -21,9 +20,6 @@ ga.Lang.code_ = window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
  * @todo api
  */
 ga.Lang.getCode = function() {
-  if (!ga.Lang.code_) {
-    ga.Lang.setCode('de');
-  }
   return ga.Lang.code_;
 };
 
@@ -35,9 +31,6 @@ ga.Lang.getCode = function() {
  */
 ga.Lang.setCode = function(code) {
   ga.Lang.code_ = code;
-  if (window['GeoAdmin'] && window['GeoAdmin']['lang']) {
-    window['GeoAdmin']['lang'] = code;
-  }
 };
 
 

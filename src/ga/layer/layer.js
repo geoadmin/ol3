@@ -114,12 +114,22 @@ ga.layer.create = function(layer, options) {
 /**
  * @type {Object.<string, Object>}
  */
-ga.layer.layerConfig = GeoAdmin.getConfig() || {};
+ga.layer.layerConfig = {};
 
 /**
  * @type {Object.<string, Object>}
  */
 ga.layer.attributions = {};
+
+/**
+ * Set layerConfiguration
+ * @param {Object.<string, Object>} config,  as read from service
+ * @todo api
+ */
+ga.layer.setConfig = function(config) {
+  ga.layer.layerConfig = config;
+};
+
 
 /**
  * Get the attribution 

@@ -9,6 +9,9 @@ goog.require('ol.style.Stroke');
 goog.require('ol.style.Style');
 goog.require('ol.style.Text');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
+
 var vector = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
     projection: 'EPSG:21781',

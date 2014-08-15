@@ -110,12 +110,12 @@ def get_layersconfig(t):
         t.download('http:' + api_url + '/rest/services/api/MapServer/layersConfig?lang=%s' % lang)
         os.rename(t.name, name)
         t.info('downloaded %r', name)
-        prepend(name, """var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return %s } """)
+        prepend(name, """var ExamplesConfig = %s;""")
 
 @target('build/serverconfig')
 def serverconfig(t):
     with open(t.name + '.js', 'w') as f:
-        f.write( """var GeoAdmin=GeoAdmin || {}; GeoAdmin.serviceUrl='"""+ api_url   + """'; """)
+        f.write( """var ExamplesServiceUrl = '"""+ api_url   + """';""")
         
 @target('serve', PLOVR_JAR, 'test-deps', 'examples')
 def serve(t):

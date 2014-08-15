@@ -1,3 +1,7 @@
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
+ga.Lang.setCode('fr');
+
 // Create a GeoAdmin Map
 var map = new ga.Map({
   // Define the div where the map is placed

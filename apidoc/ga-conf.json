@@ -16,7 +16,6 @@
             "src",
             "externs/oli.js",
             "externs/olx.js",
-            "externs/ga.js",
             "externs/gax.js"
         ]
     },

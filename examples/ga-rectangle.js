@@ -9,6 +9,9 @@ goog.require('ol.style.Fill');
 goog.require('ol.style.Stroke');
 goog.require('ol.style.Style');
 
+ga.layer.setConfig(ExamplesConfig);
+ga.setServiceUrl(ExamplesServiceUrl);
+
 // Create the GeoAdmin map
 var map = new ga.Map({
   target: 'map',

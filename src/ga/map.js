@@ -29,6 +29,7 @@ goog.require('ol.style.Circle');
 
 goog.require('ga.Tooltip');
 goog.require('ga.Lang');
+goog.require('ga.ServiceUrl');
 
 
 /**
@@ -105,9 +106,6 @@ ga.Map = function(options) {
 
   this.addControl(new ol.control.ScaleLine());
 
-
-  this.serviceUrl = window['GeoAdmin']['serviceUrl'];
-
   // Geocoder
   this.geocoderDialog_ = null;
   this.geocoderList_ = null;
@@ -134,7 +132,7 @@ goog.inherits(ga.Map, ol.Map);
  */
 ga.Map.prototype.geocode = function(text) {
   var jsonp = new goog.net.Jsonp(
-    this.serviceUrl + '/rest/services/api/SearchServer');
+    ga.getServiceUrl() + '/rest/services/api/SearchServer');
   var payload = { 'searchText': text,
                   'type': 'locations',
                   'lang': ga.Lang.getCode(),
@@ -169,7 +167,7 @@ ga.Map.prototype.handleGeocodeError_ = function(response) {
  */
 ga.Map.prototype.recenterFeature = function(layerId, featureId) {
   var jsonp = new goog.net.Jsonp(
-    this.serviceUrl + '/rest/services/api/MapServer/' +
+    ga.getServiceUrl() + '/rest/services/api/MapServer/' +
     layerId + '/' + featureId);
   var payload = { 'geometryFormat': 'geojson' };
   jsonp.send(payload, 
@@ -202,7 +200,7 @@ ga.Map.prototype.recenterToFeature_ = function(feature) {
  */
 ga.Map.prototype.highlightFeature = function(layerId, featureId) {
   var jsonp = new goog.net.Jsonp(
-    this.serviceUrl + '/rest/services/api/MapServer/' +
+    ga.getServiceUrl() + '/rest/services/api/MapServer/' +
     layerId + '/' + featureId);
   var payload = { 'geometryFormat': 'geojson' };
   jsonp.send(payload, 
