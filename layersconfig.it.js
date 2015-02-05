@@ -1,8 +1,31 @@
 var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
+  "ch.are.agglomerationen_isolierte_staedte": {
+    "attribution": "ARE", 
+    "attributionUrl": "http://www.are.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Agglomerati e citt\u00e1 isolate", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.are.agglomerationen_isolierte_staedte", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20140101"
+    ], 
+    "topics": "api,are,ech,inspire,swissmaponline", 
+    "type": "wmts"
+  }, 
   "ch.are.alpenkonvention": {
     "attribution": "ARE", 
     "attributionUrl": "http://www.are.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -17,12 +40,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090101"
     ], 
+    "topics": "api,are,ech,inspire,kgs,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.are.gemeindetypen": {
     "attribution": "ARE", 
     "attributionUrl": "http://www.are.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -38,12 +63,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20140101", 
       "20120101"
     ], 
+    "topics": "api,are,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ausnahmetransportrouten": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -55,14 +82,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141022", 
+      "20141003", 
       "20111010"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-gelaendekarte": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -77,12 +108,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19980816"
     ], 
+    "topics": "api,ech,inspire,ivs,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-nat": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -97,12 +130,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20100416", 
       "20070712"
     ], 
+    "topics": "api,blw,ech,inspire,ivs,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-nat-verlaeufe": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -116,12 +151,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100416"
     ], 
+    "topics": "api,ech,inspire,ivs,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-nat_abgrenzungen": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -135,12 +172,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100414"
     ], 
+    "topics": "api,ech,inspire,ivs,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-nat_wegbegleiter": {
     "attribution": "USTRA", 
     "attributionUrl": "http://www.astra.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -154,12 +193,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100414"
     ], 
+    "topics": "api,ech,inspire,ivs,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.ivs-reg_loc": {
     "attribution": "USTRA + cantone", 
     "attributionUrl": "ch.astra.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -174,13 +215,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20100416", 
       "20070712"
     ], 
+    "topics": "api,blw,ech,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.astra.strassenverkehrszaehlung_messstellen-regional_lokal": {
     "attribution": "USTRA + cantone", 
     "attributionUrl": "ch.astra.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Circolazione stradale (regionale)", 
@@ -188,9 +232,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.astra.strassenverkehrszaehlung_messstellen-regional_lokal", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire", 
     "type": "wms", 
     "wmsLayers": "ch.astra.strassenverkehrszaehlung_messstellen-regional_lokal-status_netz,ch.astra.strassenverkehrszaehlung_messstellen-regional_lokal-typ", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -199,7 +244,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "USTRA + cantone", 
     "attributionUrl": "ch.astra.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Circolazione stradale (principale)", 
@@ -207,9 +254,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.astra.strassenverkehrszaehlung_messstellen-uebergeordnet", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire", 
     "type": "wms", 
     "wmsLayers": "ch.astra.strassenverkehrszaehlung_messstellen-uebergeordnet-status_netz,ch.astra.strassenverkehrszaehlung_messstellen-uebergeordnet-typ", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -218,6 +266,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "FOCP", 
     "attributionUrl": "http://www.bevoelkerungsschutz.admin.ch/internet/bs/it/home/das_babs.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -230,16 +279,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140120", 
       "20130220", 
       "20091127"
     ], 
+    "topics": "api,ech,inspire,kgs,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-amphibien": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -254,12 +306,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070702"
     ], 
+    "topics": "api,are,bafu,blw,ech,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-amphibien_wanderobjekte": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -273,12 +327,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070702"
     ], 
+    "topics": "api,bafu,blw,ech,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-auen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -293,12 +349,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070701"
     ], 
+    "topics": "api,are,bafu,blw,ech,gewiss,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-bln": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -313,12 +371,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20010809"
     ], 
+    "topics": "api,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-flachmoore": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -333,12 +393,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100623"
     ], 
+    "topics": "api,are,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-hochmoore": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -353,12 +415,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20080721"
     ], 
+    "topics": "api,are,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-jagdbanngebiete": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -374,12 +438,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20131202", 
       "20100801"
     ], 
+    "topics": "api,are,bafu,blw,ech,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-moorlandschaften": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -394,12 +460,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070701"
     ], 
+    "topics": "api,are,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-trockenwiesen_trockenweiden": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -416,12 +484,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120312", 
       "20100201"
     ], 
+    "topics": "api,bafu,blw,ech,inspire,sachplan,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.bundesinventare-vogelreservate": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -436,12 +506,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090617"
     ], 
+    "topics": "api,are,bafu,blw,ech,gewiss,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.fauna-steinbockkolonien": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -456,12 +528,36 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20020114"
     ], 
+    "topics": "api,bafu,ech,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.flussordnungszahlen-strahler": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Numerazione dei segmenti fluviali", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.flussordnungszahlen-strahler", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20140805"
+    ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.hydrologie-gewaesserzustandsmessstationen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -475,12 +571,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20130301"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.hydrologie-hydromessstationen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -492,14 +590,17 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141201", 
       "20081201"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.hydrologie-wassertemperaturmessstationen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -511,14 +612,17 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141201", 
       "20130322"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.laerm-bahnlaerm_nacht": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -533,12 +637,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20061231"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.laerm-bahnlaerm_tag": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -553,12 +659,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20061231"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.laerm-strassenlaerm_nacht": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -573,12 +681,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20101231"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.laerm-strassenlaerm_tag": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -593,12 +703,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20101231"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.moose": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -612,12 +724,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120416"
     ], 
+    "topics": "api,bafu,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.nabelstationen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -631,12 +745,77 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110309"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.oekomorphologie-f_abschnitte": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Ecomorfologia R - Tratti", 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.oekomorphologie-f_abschnitte", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20080913"
+    ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.oekomorphologie-f_abstuerze": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Ecomorfologia R \u2013 Opere di caduta", 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.oekomorphologie-f_abstuerze", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20110912"
+    ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.oekomorphologie-f_bauwerke": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Ecomorfologia R \u2013 Costruzioni", 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.oekomorphologie-f_bauwerke", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20110912"
+    ], 
+    "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.permafrost": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -651,12 +830,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110317"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-extensive_landwirtschaftsgebiete": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -671,12 +852,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110214"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-feuchtgebiete": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -691,12 +874,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110214"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-fliessgewaesser_seen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -711,12 +896,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110214"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-trockenstandorte": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -731,12 +918,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110214"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-wald": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -751,12 +940,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110214"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.schutzgebiete-paerke_nationaler_bedeutung": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -775,12 +966,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120127", 
       "20110103"
     ], 
+    "topics": "api,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.schutzgebiete-ramsar": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -796,12 +989,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110830", 
       "20050202"
     ], 
+    "topics": "api,are,bafu,ech,inspire,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.schutzgebiete-schweizerischer_nationalpark": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -816,12 +1011,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20010117"
     ], 
+    "topics": "api,bafu,blw,ech,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-gemeinden_hochwasser": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -840,12 +1037,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-gemeinden_lawinen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -864,12 +1063,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-gemeinden_rutschungen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -888,12 +1089,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-gemeinden_sturzprozesse": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -912,12 +1115,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-kantone_hochwasser": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -936,12 +1141,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-kantone_lawinen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -960,12 +1167,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-kantone_rutschungen": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -984,12 +1193,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.showme-kantone_sturzprozesse": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1008,12 +1219,190 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20100101"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-boeenspitzen_100": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta raffiche 100", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-boeenspitzen_100", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-boeenspitzen_30": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta raffiche 30", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-boeenspitzen_30", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-boeenspitzen_300": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta raffiche 300", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-boeenspitzen_300", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-boeenspitzen_50": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta raffiche 50", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-boeenspitzen_50", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-staudruck_100": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta pressione dinamica 100", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-staudruck_100", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-staudruck_30": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta pressione dinamica 30", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-staudruck_30", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-staudruck_300": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta pressione dinamica 300", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-staudruck_300", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.sturm-staudruck_50": {
+    "attribution": "UFAM", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Tempesta pressione dinamica 50", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.sturm-staudruck_50", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20141107"
+    ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.swissprtr": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1030,12 +1419,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120404", 
       "20110222"
     ], 
+    "topics": "api,bafu,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bafu.unesco-weltnaturerbe": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1050,12 +1441,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20080724"
     ], 
+    "topics": "api,bafu,ech,inspire,kgs,sachplan,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-entnahme": {
     "attribution": "UFAM + cantone", 
     "attributionUrl": "ch.bafu.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1069,12 +1462,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20040101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-gebietsauslaesse": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1088,12 +1483,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120701"
     ], 
+    "topics": "api,bafu,ech,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-leitungen": {
     "attribution": "UFAM + cantone", 
     "attributionUrl": "ch.bafu.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1107,12 +1504,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20040101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-rueckgabe": {
     "attribution": "UFAM + cantone", 
     "attributionUrl": "ch.bafu.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1126,12 +1525,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20040101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-teileinzugsgebiete_2": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1146,12 +1547,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120701"
     ], 
+    "topics": "api,bafu,ech,gewiss,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.wasser-teileinzugsgebiete_40": {
     "attribution": "UFAM", 
     "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1165,12 +1568,41 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120701"
     ], 
+    "topics": "api,bafu,ech,wms-bgdi_prod", 
     "type": "wmts"
+  }, 
+  "ch.bafu.wrz-wildruhezonen_portal": {
+    "attribution": "ct. [UFAM]", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Zone di tranquillit\u00e0", 
+    "opacity": 1.0, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bafu.wrz-wildruhezonen_portal", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20150106", 
+      "20141105", 
+      "20140107", 
+      "20131118", 
+      "20130111"
+    ], 
+    "topics": "api,ech,inspire,wildruhezonen,wms-bgdi_prod", 
+    "type": "wmts", 
+    "wmsLayers": ""
   }, 
   "ch.bag.zecken-fsme-faelle": {
     "attribution": "UFSP", 
     "attributionUrl": "http://www.bag.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1186,12 +1618,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20140220", 
       "20121231"
     ], 
+    "topics": "api,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bag.zecken-fsme-impfung": {
     "attribution": "UFSP", 
     "attributionUrl": "http://www.bag.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1207,12 +1641,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20140220", 
       "20121231"
     ], 
+    "topics": "api,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bag.zecken-lyme": {
     "attribution": "UFSP", 
     "attributionUrl": "http://www.bag.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1227,12 +1663,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110613"
     ], 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bak.bundesinventar-schuetzenswerte-ortsbilder": {
     "attribution": "UFC", 
     "attributionUrl": "http://www.bak.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1244,17 +1682,20 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140801", 
       "20131113", 
       "20121218", 
       "20120510", 
       "20110915"
     ], 
+    "topics": "api,blw,ech,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bak.schutzgebiete-unesco_weltkulturerbe": {
     "attribution": "UFC", 
     "attributionUrl": "http://www.bak.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1269,12 +1710,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120203"
     ], 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.anbieter-eigenes_festnetz": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1287,18 +1730,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.anschlussart-glasfaser": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1311,18 +1758,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.anschlussart-koaxialkabel": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1335,18 +1786,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.anschlussart-kupferdraht": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1359,18 +1814,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink1": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1383,22 +1842,26 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink10": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "ch.bakom.downlink10", 
+    "label": "Download \u2265 10 Mbit/s", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -1407,18 +1870,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink100": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1431,18 +1898,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink2": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1455,18 +1926,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink20": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1479,18 +1954,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.downlink50": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1503,19 +1982,24 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.mobil-antennenstandorte-gsm": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Ubicazione antenne GSM", 
@@ -1523,9 +2007,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bakom.mobil-antennenstandorte-gsm", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bakom.mobil-antennenstandorte-gsm", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1534,7 +2019,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Ubicazione antenne 4G (LTE)", 
@@ -1542,9 +2029,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bakom.mobil-antennenstandorte-lte", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bakom.mobil-antennenstandorte-lte", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1553,7 +2041,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Ubicazione antenne 3G (UMTS)", 
@@ -1561,9 +2051,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bakom.mobil-antennenstandorte-umts", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bakom.mobil-antennenstandorte-umts", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1572,7 +2063,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Emittenti radiotelevisive", 
@@ -1580,9 +2073,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bakom.radio-fernsehsender", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bakom.radio-fernsehsender", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1591,6 +2085,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1603,18 +2098,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.uplink10": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1627,18 +2126,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.uplink100": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1651,18 +2154,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.uplink2": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1675,18 +2182,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.uplink20": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1699,18 +2210,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.uplink50": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1723,18 +2238,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.verfuegbarkeit-hdtv": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1747,18 +2266,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.verfuegbarkeit-tv": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1771,18 +2294,22 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141120", 
+      "20141021", 
       "20140625", 
       "20131212", 
       "20130901", 
       "20130601", 
       "20121222"
     ], 
+    "topics": "api,ech,inspire,nga,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.versorgungsgebiet-tv": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1797,12 +2324,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070704"
     ], 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bakom.versorgungsgebiet-ukw": {
     "attribution": "UFCOM", 
     "attributionUrl": "http://www.bakom.admin.ch/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1817,23 +2346,28 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070704"
     ], 
+    "topics": "api,ech,funksender,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bav.kataster-belasteter-standorte-oev": {
     "attribution": "UFT", 
     "attributionUrl": "http://www.bav.admin.ch/?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Siti inquinati trasporti pubbl.", 
+    "opacity": 0.75, 
     "queryable": true, 
-    "searchable": false, 
+    "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bav.kataster-belasteter-standorte-oev", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bav.kataster-belasteter-standorte-oev", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1842,6 +2376,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFT", 
     "attributionUrl": "http://www.bav.admin.ch/?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1855,12 +2390,59 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20101109"
     ], 
+    "topics": "api,wms-bgdi_prod", 
     "type": "wmts"
+  }, 
+  "ch.bav.sachplan-infrastruktur-schiene_kraft": {
+    "attribution": "UFT", 
+    "attributionUrl": "http://www.bav.admin.ch/?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 25, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "SIS in vigore", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bav.sachplan-infrastruktur-schiene_kraft", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,ech,inspire,sachplan,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bav.sachplan-infrastruktur-schiene_kraft", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bazl.kataster-belasteter-standorte-zivilflugplaetze": {
+    "attribution": "UFAC", 
+    "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 15, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Siti inquinati aeroporti civili", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bazl.kataster-belasteter-standorte-zivilflugplaetze", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bazl.kataster-belasteter-standorte-zivilflugplaetze", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
   }, 
   "ch.bazl.luftfahrtkarten-icao": {
     "attribution": "UFAC", 
     "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1877,16 +2459,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120308", 
       "20110310"
     ], 
+    "topics": "api,aviation,ech,inspire,mgdi,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.bazl.projektierungszonen-flughafenanlagen": {
     "attribution": "UFAC", 
     "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Zone riservate: Aerodromi", 
+    "label": "Zone riservate: aerodromi", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -1897,13 +2481,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20130822"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bazl.sachplan-infrastruktur-luftfahrt_kraft": {
     "attribution": "UFAC", 
     "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "PS infrastruttura aeronautica", 
@@ -1911,9 +2498,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bazl.sachplan-infrastruktur-luftfahrt_kraft", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,sachplan,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bazl.sachplan-infrastruktur-luftfahrt_kraft", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1922,6 +2510,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFAC", 
     "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1937,13 +2526,39 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130307", 
       "20120308"
     ], 
+    "topics": "api,aviation,ech,inspire,mgdi,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
+  }, 
+  "ch.bazl.sicherheitszonenplan": {
+    "attribution": "UFAC", 
+    "attributionUrl": "http://www.bazl.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 15, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Piano delle zone di sicurezza", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bazl.sicherheitszonenplan", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bazl.sicherheitszonenplan", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
   }, 
   "ch.bfe.abgeltung-wasserkraftnutzung": {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Abbandono dell'idroelettricit\u00e1", 
@@ -1951,9 +2566,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.abgeltung-wasserkraftnutzung", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.abgeltung-wasserkraftnutzung", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -1962,7 +2578,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Ricerca energetica", 
@@ -1970,17 +2588,108 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.energieforschung", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.energieforschung", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bfe.energiestaedte": {
+    "attribution": "UFE", 
+    "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 15, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Citt\u00e0 dell\u2019energia", 
+    "opacity": 0.6, 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bfe.energiestaedte", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bfe.energiestaedte", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bfe.energiestaedte-2000watt-areale": {
+    "attribution": "UFE", 
+    "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 25, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Aree 2000 Watt", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bfe.energiestaedte-2000watt-areale", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bfe.energiestaedte-2000watt-areale", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bfe.energiestaedte-2000watt-aufdemweg": {
+    "attribution": "UFE", 
+    "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 25, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Citt\u00e0 dell\u2019energia verso 2000 Watt", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bfe.energiestaedte-2000watt-aufdemweg", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bfe.energiestaedte-2000watt-aufdemweg", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bfe.energiestaedte-energieregionen": {
+    "attribution": "UFE", 
+    "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 15, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Regioni-Energia", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.bfe.energiestaedte-energieregionen", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bfe.energiestaedte-energieregionen", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
   }, 
   "ch.bfe.kernkraftwerke": {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -1994,12 +2703,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120911"
     ], 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfe.kleinwasserkraftpotentiale": {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2013,13 +2724,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120531"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfe.sachplan-geologie-tiefenlager": {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "PS depositi strati geol. profondi", 
@@ -2028,9 +2742,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.sachplan-geologie-tiefenlager", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,geol,inspire,sachplan,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.sachplan-geologie-tiefenlager", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2039,7 +2754,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "PS depositi strati geol.prof.: p.t.", 
@@ -2048,9 +2765,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.sachplan-geologie-tiefenlager-thematische-darstellung", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.sachplan-geologie-tiefenlager-thematische-darstellung", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2059,7 +2777,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Statistica idroelettricit\u00e1", 
@@ -2067,9 +2787,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.statistik-wasserkraftanlagen", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.statistik-wasserkraftanlagen", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2078,7 +2799,9 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UFE", 
     "attributionUrl": "http://www.bfe.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Impianti di sbarramento", 
@@ -2086,9 +2809,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.bfe.stauanlagen-bundesaufsicht", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,gewiss,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.stauanlagen-bundesaufsicht", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2097,10 +2821,11 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Statistica di superficie 2004/2009", 
+    "label": "Stat. superficie 04/09 NOAS04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2111,16 +2836,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,gewiss,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-1985": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Statistica di superficie 1979/1985", 
+    "label": "Stat. superficie 79/85", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2132,16 +2859,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20131121", 
       "19790101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-1997": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Statistica di superficie 1992/1997", 
+    "label": "Stat. superficie 92/97 NOAS04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2153,16 +2882,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20131121", 
       "19920101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodenbedeckung": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 2004/09 NOLC04", 
+    "label": "Stat. superficie 04/09 NOLC04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2173,16 +2904,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodenbedeckung-1985": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 1979/85 NOLC04", 
+    "label": "Stat. superficie 79/85 NOLC04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2193,16 +2926,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodenbedeckung-1997": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 1992/97 NOLC04", 
+    "label": "Stat. superficie 92/97 NOAS04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2213,16 +2948,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodennutzung": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 2004/09 NOLU04", 
+    "label": "Stat. superficie 04/09 NOLU04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2233,16 +2970,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodennutzung-1985": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 1979/85 NOLU04", 
+    "label": "Stat. superficie 79/85 NOAS04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2253,16 +2992,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-bodennutzung-1997": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stat. superficie 1992/97 NOLU04", 
+    "label": "Stat. superficie 92/97 NOLU04", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -2273,12 +3014,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20131121"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-hintergrund": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2293,12 +3036,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070116"
     ], 
+    "topics": "api,ech,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.bfs.arealstatistik-waldmischungsgrad": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2313,12 +3058,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19970901"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bfs.gebaeude_wohnungs_register": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Registro degli edifici e delle abitazioni", 
@@ -2333,12 +3080,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,kgs,swissmaponline", 
     "type": "aggregate"
   }, 
   "ch.bfs.gebaeude_wohnungs_register_wms": {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "gutter": 20, 
     "hasLegend": true, 
@@ -2354,6 +3103,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,kgs,swissmaponline", 
     "type": "wms", 
     "wmsLayers": "ch.bfs.gebaeude_wohnungs_register", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2362,6 +3112,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "UST", 
     "attributionUrl": "http://www.bfs.admin.ch/bfs/portal/it/index.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2401,12 +3152,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20130212"
     ], 
+    "topics": "api,ech,inspire,kgs,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.blw.alpprodukte": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2422,16 +3175,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130531", 
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bergprodukte": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Prodotti montagna", 
+    "label": "Prodotti di montagna", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2443,12 +3198,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130531", 
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bewaesserungsbeduerftigkeit": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2463,12 +3220,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20091110"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-gruendigkeit": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2483,16 +3242,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-kulturland": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Idoneit\u00e0: terre agricole", 
+    "label": "Idoneit\u00e0: Terreni coltivi", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2503,12 +3264,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-kulturtyp": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2523,16 +3286,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-naehrstoffspeichervermoegen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Stoccaggio di nutrienti", 
+    "label": "Stoccaggio di sostanze nutritive", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2543,12 +3308,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-skelettgehalt": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2563,12 +3330,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-vernaessung": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2583,12 +3352,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-wasserdurchlaessigkeit": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2603,12 +3374,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.bodeneignung-wasserspeichervermoegen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2623,12 +3396,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.erosion": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2643,12 +3418,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100103"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.erosion-mit_bergzonen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2663,12 +3440,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100103"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.erosion-quantitativ": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2683,12 +3462,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20100601"
     ], 
+    "topics": "api,blw,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.feldblockkarte": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2703,12 +3484,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20120601"
     ], 
+    "topics": "api,blw,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.gewaesseranschlusskarte": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2723,16 +3506,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20121201"
     ], 
+    "topics": "api,blw,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.gewaesseranschlusskarte-direkt": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "superfici collegate integrate", 
+    "label": "Superfici collegate integrate", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2743,12 +3528,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20121201"
     ], 
+    "topics": "api,blw,ech,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.hang_steillagen": {
     "attribution": "UFAG + cantone", 
     "attributionUrl": "ch.blw.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2764,16 +3551,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20121231", 
       "20100501"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-futterbau": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - foraggicoltura", 
+    "label": "Clima - Foraggicoltura", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2784,16 +3573,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-getreidebau": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - cerealicoltura", 
+    "label": "Clima - Cerealicoltura", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2804,16 +3595,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-kartoffeln": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - patate", 
+    "label": "Clima - Patate", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2824,16 +3617,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-koernermais": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - mais da granella", 
+    "label": "Clima - Mais da granella", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2844,16 +3639,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-kulturland": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - terreni coltivi", 
+    "label": "Clima - Terreni coltivi", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2864,16 +3661,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-spezialkulturen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - colture speciali", 
+    "label": "Clima - Colture speciali", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2884,12 +3683,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-typ": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2904,16 +3705,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.klimaeignung-zwischenfruchtbau": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Clima - colture intercalari", 
+    "label": "Clima - Colture intercalari", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -2924,12 +3727,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.landwirtschaftliche-zonengrenzen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2942,18 +3747,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140418", 
       "20140417", 
       "20140108", 
       "20130531", 
       "20111214", 
       "20111010"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.niederschlagshaushalt": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2968,12 +3776,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.steil_terrassenlagen_rebbau": {
     "attribution": "UFAG + cantone", 
     "attributionUrl": "ch.blw.kt.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -2989,16 +3799,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20121231", 
       "20100501"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.ursprungsbezeichnungen-fleisch": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "IGP Prodotto a base di carne", 
+    "label": "IGP Prodotti carnei", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -3010,12 +3822,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110805", 
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.ursprungsbezeichnungen-kaese": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3030,12 +3844,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.ursprungsbezeichnungen-pflanzen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3050,16 +3866,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.blw.ursprungsbezeichnungen-spirituosen": {
     "attribution": "UFAG", 
     "attributionUrl": "http://www.blw.admin.ch/index.html?lang=it", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "DOP distillati", 
+    "label": "DOP Distillati", 
     "opacity": 0.75, 
     "queryable": false, 
     "searchable": false, 
@@ -3070,12 +3888,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081024"
     ], 
+    "topics": "api,blw,ech,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.ensi.zonenplan-notfallschutz-kernanlagen": {
     "attribution": "IFSN", 
     "attributionUrl": "ch.ensi.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3091,12 +3911,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120101", 
       "20110412"
     ], 
+    "topics": "api,ech,inspire,mgdi,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.kantone.cadastralwebmap-farbe": {
     "attribution": "Misurazione ufficiale svizzera / FL", 
     "attributionUrl": "http://www.cadastre.ch/internet/cadastre/it/home/products/webmap/cwm.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": false, 
@@ -3108,6 +3930,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,blw,ech,funksender,inspire,kgs,swissmaponline,swisstopo", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.swisstlm3d-karte-farbe.mapproxy,ch.kantone.cadastralwebmap-farbe", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3116,6 +3939,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Informazioni sul Comune", 
@@ -3126,18 +3950,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "serverLayerName": "ch.swisstopo-vd.geometa-gemeinde", 
     "singleTile": true, 
     "subLayersIds": [
-      "ch.swisstopo-vd.geometa-gemeinde_wms", 
-      "ch.swisstopo-vd.geometa-gemeinde_wmstile"
+      "ch.swisstopo-vd.geometa-gemeinde_wmstile", 
+      "ch.swisstopo-vd.geometa-gemeinde_wms"
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo-vd.geometa-gemeinde_wms": {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "ch.swisstopo-vd.geometa-gemeinde_wms", 
@@ -3149,9 +3976,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo-vd.geometa-gemeinde", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-gemeinde", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3160,6 +3988,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3174,6 +4003,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-gemeinde", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3182,6 +4012,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Informazioni del registro fondiario", 
@@ -3197,13 +4028,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo-vd.geometa-grundbuch_wms": {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "ch.swisstopo-vd.geometa-grundbuch_wms", 
@@ -3215,9 +4049,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo-vd.geometa-grundbuch", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-grundbuch", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3226,6 +4061,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3240,6 +4076,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-grundbuch", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3248,6 +4085,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Aree con lavori in corso", 
@@ -3263,13 +4101,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo-vd.geometa-los_wms": {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "ch.swisstopo-vd.geometa-los_wms", 
@@ -3281,9 +4122,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo-vd.geometa-los", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-los", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3292,6 +4134,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3306,6 +4149,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-los", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3314,6 +4158,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Geometra revisore", 
@@ -3329,13 +4174,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo-vd.geometa-nfgeom_wms": {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "ch.swisstopo-vd.geometa-nfgeom_wms", 
@@ -3347,9 +4195,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo-vd.geometa-nfgeom", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-nfgeom", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3358,6 +4207,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3372,6 +4222,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-nfgeom", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3380,6 +4231,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Stato della misurazione ufficiale", 
@@ -3395,13 +4247,16 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo-vd.geometa-standav_wms": {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "ch.swisstopo-vd.geometa-standav_wms", 
@@ -3413,9 +4268,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo-vd.geometa-standav", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-standav", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3424,6 +4280,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "Misurazione Ufficiale Svizzera", 
     "attributionUrl": "http://www.cadastre.ch", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3438,6 +4295,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.geometa-standav", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3446,6 +4304,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
@@ -3458,6 +4317,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo-vd.ortschaftenverzeichnis_plz", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3466,6 +4326,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3478,16 +4339,42 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141101", 
       "20131028", 
       "20121102", 
       "20111216"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
+  }, 
+  "ch.swisstopo-vd.stand-oerebkataster": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 10, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Disponibilit\u00e0 del Catasto RDPP", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo-vd.stand-oerebkataster", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,dev,ech,inspire,swisstopo,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.swisstopo-vd.stand-oerebkataster", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
   }, 
   "ch.swisstopo.dreiecksvermaschung": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3501,12 +4388,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20061231"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.fixpunkte-agnes": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3518,15 +4407,20 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140924", 
       "20120622", 
       "20110509"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.fixpunkte-hfp1": {
     "attribution": "swisstopo, ct.", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
     "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 100, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Punti fissi altimetrici PFA1", 
@@ -3534,83 +4428,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.fixpunkte-hfp1", 
-    "singleTile": true, 
-    "subLayersIds": [
-      "ch.swisstopo.fixpunkte-hfp1_wmts", 
-      "ch.swisstopo.fixpunkte-hfp1_wms"
-    ], 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "type": "aggregate"
-  }, 
-  "ch.swisstopo.fixpunkte-hfp1_wms": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-hfp1_wms", 
-    "maxResolution": 50.0, 
-    "minResolution": 0.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-hfp1", 
-    "queryable": false, 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-hfp1", 
-    "singleTile": true, 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.fixpunkte-hfp1", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
-  }, 
-  "ch.swisstopo.fixpunkte-hfp1_wmts": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-hfp1_wmts", 
-    "minResolution": 50.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-hfp1", 
-    "queryable": false, 
-    "resolutions": [
-      4000, 
-      3750, 
-      3500, 
-      3250, 
-      3000, 
-      2750, 
-      2500, 
-      2250, 
-      2000, 
-      1750, 
-      1500, 
-      1250, 
-      1000, 
-      750, 
-      650, 
-      500, 
-      250, 
-      100, 
-      50
-    ], 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-hfp1", 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
-    "timestamps": [
-      "20121212"
-    ], 
-    "type": "wmts"
   }, 
   "ch.swisstopo.fixpunkte-hfp2": {
     "attribution": "swisstopo, ct.", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
     "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 100, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Punti fissi altimetrici PFA2", 
@@ -3618,83 +4450,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.fixpunkte-hfp2", 
-    "singleTile": true, 
-    "subLayersIds": [
-      "ch.swisstopo.fixpunkte-hfp2_wmts", 
-      "ch.swisstopo.fixpunkte-hfp2_wms"
-    ], 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "type": "aggregate"
-  }, 
-  "ch.swisstopo.fixpunkte-hfp2_wms": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-hfp2_wms", 
-    "maxResolution": 50.0, 
-    "minResolution": 0.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-hfp2", 
-    "queryable": false, 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-hfp2", 
-    "singleTile": true, 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.fixpunkte-hfp2", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
-  }, 
-  "ch.swisstopo.fixpunkte-hfp2_wmts": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-hfp2_wmts", 
-    "minResolution": 20.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-hfp2", 
-    "queryable": false, 
-    "resolutions": [
-      4000, 
-      3750, 
-      3500, 
-      3250, 
-      3000, 
-      2750, 
-      2500, 
-      2250, 
-      2000, 
-      1750, 
-      1500, 
-      1250, 
-      1000, 
-      750, 
-      650, 
-      500, 
-      250, 
-      100, 
-      50
-    ], 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-hfp2", 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
-    "timestamps": [
-      "20121212"
-    ], 
-    "type": "wmts"
   }, 
   "ch.swisstopo.fixpunkte-lfp1": {
     "attribution": "swisstopo, ct.", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
     "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 100, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Punti fissi planimetrici PFP1", 
@@ -3702,83 +4472,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.fixpunkte-lfp1", 
-    "singleTile": true, 
-    "subLayersIds": [
-      "ch.swisstopo.fixpunkte-lfp1_wmts", 
-      "ch.swisstopo.fixpunkte-lfp1_wms"
-    ], 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "type": "aggregate"
-  }, 
-  "ch.swisstopo.fixpunkte-lfp1_wms": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-lfp1_wms", 
-    "maxResolution": 50.0, 
-    "minResolution": 0.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-lfp1", 
-    "queryable": false, 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-lfp1", 
-    "singleTile": true, 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.fixpunkte-lfp1", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
-  }, 
-  "ch.swisstopo.fixpunkte-lfp1_wmts": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-lfp1_wmts", 
-    "minResolution": 50.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-lfp1", 
-    "queryable": false, 
-    "resolutions": [
-      4000, 
-      3750, 
-      3500, 
-      3250, 
-      3000, 
-      2750, 
-      2500, 
-      2250, 
-      2000, 
-      1750, 
-      1500, 
-      1250, 
-      1000, 
-      750, 
-      650, 
-      500, 
-      250, 
-      100, 
-      50
-    ], 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-lfp1", 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
-    "timestamps": [
-      "20121212"
-    ], 
-    "type": "wmts"
   }, 
   "ch.swisstopo.fixpunkte-lfp2": {
     "attribution": "swisstopo, ct.", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
     "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 100, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Punti fissi planimetrici PFP2", 
@@ -3786,83 +4494,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.fixpunkte-lfp2", 
-    "singleTile": true, 
-    "subLayersIds": [
-      "ch.swisstopo.fixpunkte-lfp2_wmts", 
-      "ch.swisstopo.fixpunkte-lfp2_wms"
-    ], 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "type": "aggregate"
-  }, 
-  "ch.swisstopo.fixpunkte-lfp2_wms": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-lfp2_wms", 
-    "maxResolution": 50.0, 
-    "minResolution": 0.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-lfp2", 
-    "queryable": false, 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-lfp2", 
-    "singleTile": true, 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.fixpunkte-lfp2", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
-  }, 
-  "ch.swisstopo.fixpunkte-lfp2_wmts": {
-    "attribution": "swisstopo, ct.", 
-    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
-    "background": false, 
-    "format": "png", 
-    "hasLegend": true, 
-    "highlightable": true, 
-    "label": "ch.swisstopo.fixpunkte-lfp2_wmts", 
-    "minResolution": 50.0, 
-    "parentLayerId": "ch.swisstopo.fixpunkte-lfp2", 
-    "queryable": false, 
-    "resolutions": [
-      4000, 
-      3750, 
-      3500, 
-      3250, 
-      3000, 
-      2750, 
-      2500, 
-      2250, 
-      2000, 
-      1750, 
-      1500, 
-      1250, 
-      1000, 
-      750, 
-      650, 
-      500, 
-      250, 
-      100, 
-      50
-    ], 
-    "searchable": false, 
-    "selectbyrectangle": false, 
-    "serverLayerName": "ch.swisstopo.fixpunkte-lfp2", 
-    "timeBehaviour": "last", 
-    "timeEnabled": false, 
-    "timestamps": [
-      "20121212"
-    ], 
-    "type": "wmts"
   }, 
   "ch.swisstopo.geoidmodell-ch1903": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3877,12 +4521,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20041231"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geoidmodell-etrs89": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3897,16 +4543,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20041231"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-eiszeit-lgm-raster": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Ultimo massimo glaciale", 
+    "label": "Ultimo massimo glaciale 500", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -3916,16 +4564,89 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20081231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
+  }, 
+  "ch.swisstopo.geologie-geocover": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": true, 
+    "format": "png", 
+    "hasLegend": false, 
+    "highlightable": true, 
+    "label": "GeoCover - Dati geol. vettoriali", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "resolutions": [
+      4000, 
+      3750, 
+      3500, 
+      3250, 
+      3000, 
+      2750, 
+      2500, 
+      2250, 
+      2000, 
+      1750, 
+      1500, 
+      1250, 
+      1000, 
+      750, 
+      650, 
+      500, 
+      250, 
+      100, 
+      50, 
+      20, 
+      10, 
+      5, 
+      2.5, 
+      2
+    ], 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.geologie-geocover", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20140601"
+    ], 
+    "topics": "api,dev,ech,geol,inspire,swisstopo,wms-swisstopowms_prod", 
+    "type": "wmts"
+  }, 
+  "ch.swisstopo.geologie-geocover.metadata": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "gutter": 15, 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Divisione GeoCover", 
+    "opacity": 0.75, 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.geologie-geocover.metadata", 
+    "singleTile": false, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,ech,geol,inspire,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.swisstopo.geologie-geocover.metadata", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
   }, 
   "ch.swisstopo.geologie-geodaesie-bouguer_anomalien": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Anomalia di Bouguer", 
+    "label": "Anomalia di Bouguer 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -3935,12 +4656,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19791231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geodaesie-isostatische_anomalien": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3954,12 +4677,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19791231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geolkarten500.metadata": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -3974,16 +4699,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070425"
     ], 
+    "topics": "api,ech,geol,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geologische_karte": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Geologia 1:500 000", 
+    "label": "Carta geologica 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -3994,16 +4721,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20080630", 
       "20051231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geologischer_atlas": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
-    "hasLegend": true, 
+    "hasLegend": false, 
     "highlightable": true, 
-    "label": "Atlante geologico 1:25 000", 
+    "label": "Atlante geol. della Svizz. 1:25 000", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4015,12 +4744,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120601", 
       "20101221"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-aeromagnetische_karte_jura": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4034,19 +4765,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19831231"
     ], 
+    "topics": "api,ech,geol,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-aeromagnetische_karte_schweiz": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Aeromagnetismo", 
     "queryable": true, 
     "searchable": false, 
-    "selectbyrectangle": true, 
+    "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo.geologie-geophysik-aeromagnetische_karte_schweiz", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
@@ -4054,12 +4787,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120628", 
       "19821231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-deklination": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4074,12 +4809,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20011203", 
       "19791231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-geothermie": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4094,12 +4831,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20111121", 
       "19821231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-inklination": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4114,12 +4853,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20111128", 
       "19791231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geophysik-totalintensitaet": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4134,12 +4875,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19800101", 
       "19791231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotechnik-gk200": {
     "attribution": "swisstopo, sgtk", 
     "attributionUrl": "ch.swisstopo.sgtk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4154,12 +4897,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19670101"
     ], 
+    "topics": "api,ech,geol,inspire,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotechnik-gk500-genese": {
     "attribution": "swisstopo, sgtk", 
     "attributionUrl": "ch.swisstopo.sgtk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4175,12 +4920,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20060304", 
       "20000101"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotechnik-gk500-gesteinsklassierung": {
     "attribution": "swisstopo, sgtk", 
     "attributionUrl": "ch.swisstopo.sgtk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4196,12 +4943,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20060304", 
       "20000101"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotechnik-gk500-lithologie_hauptgruppen": {
     "attribution": "swisstopo, sgtk", 
     "attributionUrl": "ch.swisstopo.sgtk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4217,12 +4966,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20060304", 
       "20000101"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotechnik-mineralische_rohstoffe200": {
     "attribution": "swisstopo, sgtk", 
     "attributionUrl": "ch.swisstopo.sgtk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4237,12 +4988,35 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19900101"
     ], 
+    "topics": "api,ech,geol,inspire,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.swisstopo.geologie-geotechnik-steine_historische_bauwerke": {
+    "attribution": "swisstopo, sgtk", 
+    "attributionUrl": "ch.swisstopo.sgtk.url", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Pietre dei monumenti storici", 
+    "queryable": true, 
+    "searchable": false, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.geologie-geotechnik-steine_historische_bauwerke", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20130620"
+    ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geotope": {
     "attribution": "swisstopo, scnat", 
     "attributionUrl": "ch.swisstopo.scnat.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4257,16 +5031,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130107", 
       "20110201"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-gravimetrischer_atlas": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Atlas gravim\u00e9trique", 
+    "label": "Atlante gravimetrico 1:100000", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -4276,12 +5052,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20021231"
     ], 
+    "topics": "api,ech,geol,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-gravimetrischer_atlas.metadata": {
     "attribution": "swisstopo, sgpk", 
     "attributionUrl": "ch.swisstopo.sgpk.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4296,16 +5074,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20021231"
     ], 
+    "topics": "api,ech,geol,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-hydrogeologische_karte-grundwasservorkommen": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Riserve acquifere", 
+    "label": "Falde acquifere 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4316,16 +5096,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20081103", 
       "20070101"
     ], 
+    "topics": "api,bafu,ech,geol,gewiss,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-hydrogeologische_karte-grundwasservulnerabilitaet": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Vulnerabilit\u00e1 delle falde acquifere", 
+    "label": "Vulnerab. delle falde acquifere 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4336,36 +5118,40 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20081016", 
       "20070914"
     ], 
+    "topics": "api,bafu,ech,geol,gewiss,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-spezialkarten_schweiz.metadata": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
-    "highlightable": false, 
+    "highlightable": true, 
     "label": "Divisione carte geologiche speciali", 
     "opacity": 0.75, 
-    "queryable": false, 
+    "queryable": true, 
     "searchable": false, 
-    "selectbyrectangle": false, 
+    "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.geologie-spezialkarten_schweiz.metadata", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
       "20110101"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-tektonische_karte": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Tettonica 1:500 000", 
+    "label": "Carta tettonica 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4376,12 +5162,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20080522", 
       "20051231"
     ], 
+    "topics": "api,ech,geol,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.hiks-dufour": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
@@ -4393,34 +5181,67 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
-      "18450101"
+      "18650101"
     ], 
+    "topics": "api,ech,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.hiks-siegfried": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
     "label": "Carta Siegfried Prima edizione", 
     "queryable": true, 
+    "resolutions": [
+      4000, 
+      3750, 
+      3500, 
+      3250, 
+      3000, 
+      2750, 
+      2500, 
+      2250, 
+      2000, 
+      1750, 
+      1500, 
+      1250, 
+      1000, 
+      750, 
+      650, 
+      500, 
+      250, 
+      100, 
+      50, 
+      20, 
+      10, 
+      5, 
+      2.5, 
+      2, 
+      1.5, 
+      1
+    ], 
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.hiks-siegfried", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
-      "18700101"
+      "19260101"
     ], 
+    "topics": "api,ech,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.images-swissimage.metadata": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
+    "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Divisione in tiles SWISSIMAGE", 
@@ -4428,9 +5249,10 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "searchable": false, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.images-swissimage.metadata", 
-    "singleTile": true, 
+    "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,ech,inspire,luftbilder,swisstopo,wms-bgdi_prod,wms-swisstopowms_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.images-swissimage.metadata", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -4439,6 +5261,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4453,25 +5276,28 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20061231"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-bildstreifen": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "gutter": 20, 
     "hasLegend": true, 
     "highlightable": true, 
     "label": "Striscie aeree swisstopo", 
     "queryable": true, 
-    "searchable": false, 
+    "searchable": true, 
     "selectbyrectangle": true, 
     "serverLayerName": "ch.swisstopo.lubis-bildstreifen", 
     "singleTile": false, 
     "timeBehaviour": "all", 
     "timeEnabled": true, 
     "timestamps": [
+      "2014", 
       "2013", 
       "2012", 
       "2011", 
@@ -4482,6 +5308,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "2006", 
       "2005"
     ], 
+    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.lubis-bildstreifen", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -4490,6 +5317,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "attribution": "swisstopo, prv.", 
     "attributionUrl": "ch.swisstopo.private.url", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4524,12 +5352,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19901231", 
       "19891231"
     ], 
+    "topics": "api,ech,luftbilder,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-luftbilder-dritte-kantone": {
     "attribution": "swisstopo, ct.", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home/swisstopo/org/cartography.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4542,6 +5372,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeEnabled": true, 
     "timestamps": [
       "99991231", 
+      "20141231", 
       "20131231", 
       "20121231", 
       "20111231", 
@@ -4554,32 +5385,242 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19631231", 
       "19621231"
     ], 
+    "topics": "api,ech,luftbilder,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.swisstopo.lubis-luftbilder_farbe": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Immagini aer. swisstopo colori", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.lubis-luftbilder_farbe", 
+    "timeBehaviour": "last", 
+    "timeEnabled": true, 
+    "timestamps": [
+      "99991231", 
+      "20101231", 
+      "20091231", 
+      "20081231", 
+      "20071231", 
+      "20061231", 
+      "20051231", 
+      "20041231", 
+      "20031231", 
+      "20021231", 
+      "20011231", 
+      "20001231", 
+      "19991231", 
+      "19981231", 
+      "19971231", 
+      "19961231", 
+      "19951231", 
+      "19941231", 
+      "19931231", 
+      "19921231", 
+      "19911231", 
+      "19901231", 
+      "19891231", 
+      "19881231", 
+      "19871231", 
+      "19861231", 
+      "19851231", 
+      "19841231", 
+      "19831231", 
+      "19821231", 
+      "19811231"
+    ], 
+    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.swisstopo.lubis-luftbilder_infrarot": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Immagini aeree swisstopo IR", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.lubis-luftbilder_infrarot", 
+    "timeBehaviour": "last", 
+    "timeEnabled": true, 
+    "timestamps": [
+      "99991231", 
+      "20091231", 
+      "20081231", 
+      "20071231", 
+      "20061231", 
+      "20051231", 
+      "20041231", 
+      "20031231", 
+      "20021231", 
+      "20011231", 
+      "20001231", 
+      "19991231", 
+      "19981231", 
+      "19971231", 
+      "19961231", 
+      "19951231", 
+      "19941231", 
+      "19931231", 
+      "19921231", 
+      "19911231", 
+      "19901231", 
+      "19891231", 
+      "19881231", 
+      "19871231", 
+      "19861231", 
+      "19851231", 
+      "19841231", 
+      "19831231", 
+      "19811231"
+    ], 
+    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.swisstopo.lubis-luftbilder_schwarzweiss": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "Immagini aeree swisstopo b/n", 
+    "queryable": true, 
+    "searchable": true, 
+    "selectbyrectangle": true, 
+    "serverLayerName": "ch.swisstopo.lubis-luftbilder_schwarzweiss", 
+    "timeBehaviour": "last", 
+    "timeEnabled": true, 
+    "timestamps": [
+      "99991231", 
+      "20101231", 
+      "20091231", 
+      "20081231", 
+      "20071231", 
+      "20061231", 
+      "20051231", 
+      "20041231", 
+      "20031231", 
+      "20021231", 
+      "20011231", 
+      "20001231", 
+      "19991231", 
+      "19981231", 
+      "19971231", 
+      "19961231", 
+      "19951231", 
+      "19941231", 
+      "19931231", 
+      "19921231", 
+      "19911231", 
+      "19901231", 
+      "19891231", 
+      "19881231", 
+      "19871231", 
+      "19861231", 
+      "19851231", 
+      "19841231", 
+      "19831231", 
+      "19821231", 
+      "19811231", 
+      "19801231", 
+      "19791231", 
+      "19781231", 
+      "19771231", 
+      "19761231", 
+      "19751231", 
+      "19741231", 
+      "19731231", 
+      "19721231", 
+      "19711231", 
+      "19701231", 
+      "19691231", 
+      "19681231", 
+      "19671231", 
+      "19661231", 
+      "19651231", 
+      "19641231", 
+      "19631231", 
+      "19621231", 
+      "19611231", 
+      "19601231", 
+      "19591231", 
+      "19581231", 
+      "19571231", 
+      "19561231", 
+      "19551231", 
+      "19541231", 
+      "19531231", 
+      "19521231", 
+      "19511231", 
+      "19501231", 
+      "19491231", 
+      "19481231", 
+      "19471231", 
+      "19461231", 
+      "19451231", 
+      "19441231", 
+      "19431231", 
+      "19421231", 
+      "19411231", 
+      "19401231", 
+      "19391231", 
+      "19381231", 
+      "19371231", 
+      "19361231", 
+      "19351231", 
+      "19341231", 
+      "19331231", 
+      "19321231", 
+      "19311231", 
+      "19301231", 
+      "19291231", 
+      "19281231", 
+      "19271231", 
+      "19261231"
+    ], 
+    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
-    "hasLegend": true, 
+    "chargeable": true, 
+    "hasLegend": false, 
     "highlightable": true, 
-    "label": "Carta a colori", 
+    "label": "Carta nazionale 1:25'000 | CN25", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo.pixelkarte-farbe", 
     "singleTile": true, 
     "subLayersIds": [
-      "ch.swisstopo.pixelkarte-farbe_wmts", 
-      "ch.swisstopo.swisstlm3d-karte-farbe_wmts"
+      "ch.swisstopo.swisstlm3d-karte-farbe_wmts", 
+      "ch.swisstopo.pixelkarte-farbe_wmts"
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,swissmaponline,wms-swisstopowms_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk100.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4591,6 +5632,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20140106", 
       "20130903", 
       "20130213", 
@@ -4598,12 +5640,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20111206", 
       "20111027"
     ], 
+    "topics": "api,ech,gewiss,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk1000.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4619,12 +5663,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120809", 
       "20111027"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk200.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4636,18 +5682,21 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20111027"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk25.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Carta nazionale 1:25'000", 
+    "label": "Carta nazionale 1:25'000 | CN25", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -4655,19 +5704,23 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20140520", 
       "20140106", 
       "20130903", 
       "20130213", 
       "20120809", 
-      "20111027"
+      "20111027", 
+      " "
     ], 
+    "topics": "api,ech,gewiss,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk50.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4679,6 +5732,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20140520", 
       "20140106", 
       "20130903", 
@@ -4686,12 +5740,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20120809", 
       "20111027"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe-pk500.noscale": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4703,14 +5759,17 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20111027"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe_wmts": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4724,6 +5783,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20140520", 
       "20140106", 
       "20130903", 
@@ -4733,32 +5793,36 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20111027", 
       "20110401"
     ], 
+    "topics": "api,swissmaponline,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-grau": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
-    "hasLegend": true, 
+    "chargeable": true, 
+    "hasLegend": false, 
     "highlightable": true, 
-    "label": "Carta bianca e nera", 
+    "label": "Carta nazionale 1:25'000 | CN25", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo.pixelkarte-grau", 
     "singleTile": true, 
     "subLayersIds": [
-      "ch.swisstopo.pixelkarte-grau_wmts", 
-      "ch.swisstopo.swisstlm3d-karte-grau_wmts"
+      "ch.swisstopo.swisstlm3d-karte-grau_wmts", 
+      "ch.swisstopo.pixelkarte-grau_wmts"
     ], 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
+    "topics": "api,swissmaponline,wms-swisstopowms_prod", 
     "type": "aggregate"
   }, 
   "ch.swisstopo.pixelkarte-grau_wmts": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4772,6 +5836,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
       "20140520", 
       "20140106", 
       "20130903", 
@@ -4781,34 +5846,64 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20111027", 
       "20110401"
     ], 
+    "topics": "api,swissmaponline,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissalti3d-reliefschattierung": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
     "label": "swissALTI3D Hillshade", 
     "queryable": false, 
+    "resolutions": [
+      4000, 
+      3750, 
+      3500, 
+      3250, 
+      3000, 
+      2750, 
+      2500, 
+      2250, 
+      2000, 
+      1750, 
+      1500, 
+      1250, 
+      1000, 
+      750, 
+      650, 
+      500, 
+      250, 
+      100, 
+      50, 
+      20, 
+      10, 
+      5, 
+      2.5
+    ], 
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.swisstopo.swissalti3d-reliefschattierung", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140101", 
       "20130101", 
       "20110101", 
       "20000101"
     ], 
+    "topics": "api,blw,ech,funksender,gewiss,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissboundaries3d-bezirk-flaeche.fill": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4820,16 +5915,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140101", 
       "20130101", 
       "20120101"
     ], 
+    "topics": "api,are,blw,ech,funksender,gewiss,inspire,kgs,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4841,16 +5939,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140101", 
       "20130101", 
       "20120101"
     ], 
+    "topics": "api,are,aviation,blw,ech,funksender,gewiss,inspire,ivs,kgs,sachplan,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissboundaries3d-kanton-flaeche.fill": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4862,16 +5963,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140101", 
       "20130101", 
       "20120101"
     ], 
+    "topics": "api,are,aviation,blw,ech,funksender,gewiss,inspire,ivs,kgs,sachplan,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissboundaries3d-land-flaeche.fill": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4883,16 +5987,19 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150101", 
       "20140101", 
       "20130101", 
       "20120101"
     ], 
+    "topics": "api,are,blw,ech,funksender,gewiss,inspire,ivs,kgs,swissmaponline,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissbuildings3d": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -4906,12 +6013,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19980101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissimage": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
+    "chargeable": true, 
     "format": "jpeg", 
     "hasLegend": false, 
     "highlightable": true, 
@@ -4953,6 +6062,8 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20151231", 
+      "20140620", 
       "20131107", 
       "20130916", 
       "20130422", 
@@ -4961,12 +6072,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110914", 
       "20110228"
     ], 
+    "topics": "api,luftbilder,swissmaponline", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swisstlm3d-karte-farbe": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5010,12 +6123,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20140401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swisstlm3d-karte-farbe_wmts": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5061,12 +6176,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20140401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swisstlm3d-karte-grau": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5110,12 +6227,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20140401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swisstlm3d-karte-grau_wmts": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": true, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5161,12 +6280,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20140401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swisstlm3d-wanderwege": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5181,12 +6302,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20140101", 
       "20130101"
     ], 
+    "topics": "api,blw,ech,inspire,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.transformationsgenauigkeit": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5199,15 +6322,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141101", 
       "20131028", 
       "20100531"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-adminboundaries-protectedarea": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5220,15 +6346,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-building": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5241,15 +6370,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-hydrography": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5261,15 +6393,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,gewiss,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-landcover": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5282,15 +6417,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-landcover-wald": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5303,14 +6441,17 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101"
     ], 
+    "topics": "api,bafu,ech,gewiss,inspire,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-miscellaneous": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5322,15 +6463,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-miscellaneous-geodpoint": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5342,15 +6486,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-names-namedlocation": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5362,15 +6509,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-transportation-oeffentliche-verkehr": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5382,15 +6532,18 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20140101", 
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec200-transportation-strassennetz": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5406,12 +6559,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130101", 
       "20100101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-anlagen": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5425,12 +6580,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-einzelobjekte": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5444,12 +6601,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19980101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-eisenbahnnetz": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5463,12 +6622,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-gebaeude": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5482,12 +6643,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-gewaessernetz": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5501,12 +6664,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,gewiss,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-heckenbaeume": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5520,12 +6685,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19980101"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-primaerflaechen": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5540,12 +6707,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-strassennetz": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5559,12 +6728,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.vec25-uebrigerverkehr": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": true, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5578,12 +6749,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20090401"
     ], 
+    "topics": "api,ech,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
   }, 
   "ch.swisstopo.verschiebungsvektoren-tsp1": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5597,12 +6770,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20061231"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.verschiebungsvektoren-tsp2": {
     "attribution": "swisstopo", 
     "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5616,12 +6791,14 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070101"
     ], 
+    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.vbs.territorialregionen": {
     "attribution": "DDPS", 
     "attributionUrl": "http://www.vbs.admin.ch/internet/vbs/it/home.html", 
     "background": false, 
+    "chargeable": false, 
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
@@ -5636,6 +6813,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110501"
     ], 
+    "topics": "api,ech,inspire,mgdi", 
     "type": "wmts"
   }
 } } 

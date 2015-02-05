@@ -526,7 +526,7 @@ goog.addDependency("../build/exports.js", [], ["ga.Lang", "ga.Lang.msg", "ga.Lan
 "ol.webgl.Context"]);
 goog.addDependency("../src/ga/ga.js", ["ga"], []);
 goog.addDependency("../src/ga/lang.js", ["ga.Lang", "ga.Lang.msg"], ["ga.Lang.msg.en", "ga.Lang.msg.de", "ga.Lang.msg.fr", "ga.Lang.msg.it", "ga.Lang.msg.rm"]);
-goog.addDependency("../src/ga/layer/layer.js", ["ga.layer", "ga.source.wms", "ga.source.wmts"], ["goog.array", "ol.Attribution", "ol.layer.Group", "ol.layer.Tile", "ol.layer.Image", "ol.source.TileWMS", "ol.source.ImageWMS", "ol.source.WMTS", "ol.tilegrid.WMTS"]);
+goog.addDependency("../src/ga/layer/layer.js", ["ga.layer", "ga.source.wms", "ga.source.wmts"], ["goog.array", "goog.object", "ol.Attribution", "ol.layer.Group", "ol.layer.Tile", "ol.layer.Image", "ol.source.TileWMS", "ol.source.ImageWMS", "ol.source.WMTS", "ol.tilegrid.WMTS"]);
 goog.addDependency("../src/ga/locales/de.js", ["ga.Lang.msg.de"], []);
 goog.addDependency("../src/ga/locales/en.js", ["ga.Lang.msg.en"], []);
 goog.addDependency("../src/ga/locales/fr.js", ["ga.Lang.msg.fr"], []);
@@ -34382,6 +34382,7 @@ goog.provide("ga.layer");
 goog.provide("ga.source.wms");
 goog.provide("ga.source.wmts");
 goog.require("goog.array");
+goog.require("goog.object");
 goog.require("ol.Attribution");
 goog.require("ol.layer.Group");
 goog.require("ol.layer.Tile");
@@ -34390,9 +34391,12 @@ goog.require("ol.source.TileWMS");
 goog.require("ol.source.ImageWMS");
 goog.require("ol.source.WMTS");
 goog.require("ol.tilegrid.WMTS");
-ga.layer.create = function(layer) {
+ga.layer.create = function(layer, options) {
   if(layer in ga.layer.layerConfig) {
     var layerConfig = ga.layer.layerConfig[layer];
+    if(options) {
+      goog.object.extend(layerConfig, options)
+    }
     layerConfig.type = layerConfig.type || "wmts";
     var olLayer;
     if(layerConfig.type == "aggregate") {
@@ -34447,11 +34451,11 @@ ga.source.wmts = function(layer, options) {
   var resolutions = options.resolutions ? options.resolutions : ga.layer.RESOLUTIONS;
   var tileGrid = new ol.tilegrid.WMTS({origin:[42E4, 35E4], resolutions:resolutions, matrixIds:goog.array.range(resolutions.length)});
   var extension = options.format || "png";
-  var timestamp = options["timestamps"][0];
+  var timestamp = options["timestamp"] ? options["timestamp"] : options["timestamps"][0];
   return new ol.source.WMTS(({crossOrigin:"anonymous", attributions:[ga.layer.getAttribution('\x3ca href\x3d"' + options["attributionUrl"] + '" target\x3d"new"\x3e' + options["attribution"] + "\x3c/a\x3e")], url:("http://wmts{5-9}.geo.admin.ch/1.0.0/{Layer}/default/" + timestamp + "/21781/" + "{TileMatrix}/{TileRow}/{TileCol}.").replace("http:", location.protocol) + extension, tileGrid:tileGrid, layer:options["serverLayerName"] ? options["serverLayerName"] : layer, requestEncoding:"REST"}))
 };
 ga.source.wms = function(layer, options) {
-  return new ol.source.TileWMS({crossOrigin:"anonymous", attributions:[ga.layer.getAttribution('\x3ca href\x3d"' + options["attributionUrl"] + '" target\x3d"new"\x3e' + options["attribution"] + "\x3c/a\x3e")], params:{"LAYERS":options["wmsLayers"] || layer}, url:options["wmsUrl"].split("?")[0].replace("http:", location.protocol)})
+  return new ol.source.TileWMS({crossOrigin:"anonymous", gutter:options["gutter"] | 0, attributions:[ga.layer.getAttribution('\x3ca href\x3d"' + options["attributionUrl"] + '" target\x3d"new"\x3e' + options["attribution"] + "\x3c/a\x3e")], params:{"LAYERS":options["wmsLayers"] || layer}, url:options["wmsUrl"].split("?")[0].replace("http:", location.protocol)})
 };
 ga.source.imageWms = function(layer, options) {
   return new ol.source.ImageWMS({crossOrigin:"anonymous", attributions:[ga.layer.getAttribution('\x3ca href\x3d"' + options["attributionUrl"] + '" target\x3d"new"\x3e' + options["attribution"] + "\x3c/a\x3e")], params:{"LAYERS":options["wmsLayers"] || layer}, ratio:1, url:options["wmsUrl"].split("?")[0].replace("http:", location.protocol)})
