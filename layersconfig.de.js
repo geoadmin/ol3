@@ -82,6 +82,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150211", 
       "20141022", 
       "20141003", 
       "20111010"
@@ -270,7 +271,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Kulturg\u00fcterschutzinventar", 
+    "label": "KGS Inventar", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": true, 
@@ -458,6 +459,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150202", 
       "20070701"
     ], 
     "topics": "api,are,bafu,blw,ech,gewiss,inspire,kgs,sachplan,swissmaponline,wms-bgdi_prod", 
@@ -572,6 +574,84 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130301"
     ], 
     "topics": "api,bafu,ech,gewiss,inspire,wms-bgdi_prod", 
+    "type": "wmts"
+  }, 
+  "ch.bafu.hydrologie-hintergrundkarte": {
+    "attribution": "BAFU", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=de", 
+    "background": false, 
+    "chargeable": false, 
+    "hasLegend": false, 
+    "highlightable": true, 
+    "label": "Hintergrundkarte hydrol. Daten", 
+    "queryable": false, 
+    "searchable": false, 
+    "selectbyrectangle": false, 
+    "serverLayerName": "ch.bafu.hydrologie-hintergrundkarte", 
+    "singleTile": true, 
+    "subLayersIds": [
+      "ch.bafu.hydrologie-hintergrundkarte_wmts", 
+      "ch.bafu.hydrologie-hintergrundkarte_wms"
+    ], 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "aggregate"
+  }, 
+  "ch.bafu.hydrologie-hintergrundkarte_wms": {
+    "attribution": "BAFU", 
+    "attributionUrl": "http://www.bafu.admin.ch/index.html?lang=de", 
+    "background": false, 
+    "chargeable": false, 
+    "format": "png", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "ch.bafu.hydrologie-hintergrundkarte_wms", 
+    "maxResolution": 750.0, 
+    "minResolution": 50.0, 
+    "parentLayerId": "ch.bafu.hydrologie-hintergrundkarte", 
+    "queryable": false, 
+    "searchable": false, 
+    "selectbyrectangle": false, 
+    "serverLayerName": "ch.bafu.hydrologie-hintergrundkarte", 
+    "singleTile": true, 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "topics": "api,ech,inspire,swissmaponline,wms-bgdi_prod", 
+    "type": "wms", 
+    "wmsLayers": "ch.bafu.hydrologie-hintergrundkarte", 
+    "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
+  }, 
+  "ch.bafu.hydrologie-hintergrundkarte_wmts": {
+    "attribution": "swisstopo", 
+    "attributionUrl": "http://www.swisstopo.admin.ch/internet/swisstopo/de/home.html", 
+    "background": false, 
+    "chargeable": true, 
+    "format": "jpeg", 
+    "hasLegend": true, 
+    "highlightable": true, 
+    "label": "ch.bafu.hydrologie-hintergrundkarte_wmts", 
+    "maxResolution": 50.0, 
+    "minResolution": 0.0, 
+    "parentLayerId": "ch.bafu.hydrologie-hintergrundkarte", 
+    "queryable": false, 
+    "searchable": false, 
+    "selectbyrectangle": false, 
+    "serverLayerName": "ch.swisstopo.pixelkarte-grau", 
+    "timeBehaviour": "last", 
+    "timeEnabled": false, 
+    "timestamps": [
+      "20151231", 
+      "20140520", 
+      "20140106", 
+      "20130903", 
+      "20130213", 
+      "20120809", 
+      "20111206", 
+      "20111027", 
+      "20110401"
+    ], 
+    "topics": "api,swissmaponline,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.hydrologie-hydromessstationen": {
@@ -830,7 +910,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20110317"
     ], 
-    "topics": "api,bafu,ech,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
+    "topics": "api,bafu,ech,geol,gewiss,inspire,swissmaponline,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.bafu.ren-extensive_landwirtschaftsgebiete": {
@@ -1414,6 +1494,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150226", 
       "20140213", 
       "20130207", 
       "20120404", 
@@ -1615,6 +1696,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141231", 
       "20140220", 
       "20121231"
     ], 
@@ -1638,6 +1720,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20141231", 
       "20140220", 
       "20121231"
     ], 
@@ -2402,7 +2485,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "gutter": 25, 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "SIS in Kraft", 
+    "label": "SP Infrastruktur Schiene", 
     "queryable": true, 
     "searchable": true, 
     "selectbyrectangle": true, 
@@ -2433,7 +2516,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bazl.kataster-belasteter-standorte-zivilflugplaetze", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2448,12 +2531,36 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "highlightable": true, 
     "label": "Luftfahrtkarte ICAO", 
     "queryable": false, 
+    "resolutions": [
+      4000, 
+      3750, 
+      3500, 
+      3250, 
+      3000, 
+      2750, 
+      2500, 
+      2250, 
+      2000, 
+      1750, 
+      1500, 
+      1250, 
+      1000, 
+      750, 
+      650, 
+      500, 
+      250, 
+      100, 
+      50, 
+      20, 
+      10
+    ], 
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.bazl.luftfahrtkarten-icao", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150305", 
       "20140306", 
       "20130307", 
       "20120308", 
@@ -2516,12 +2623,36 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "highlightable": true, 
     "label": "Segelflugkarte", 
     "queryable": false, 
+    "resolutions": [
+      4000, 
+      3750, 
+      3500, 
+      3250, 
+      3000, 
+      2750, 
+      2500, 
+      2250, 
+      2000, 
+      1750, 
+      1500, 
+      1250, 
+      1000, 
+      750, 
+      650, 
+      500, 
+      250, 
+      100, 
+      50, 
+      20, 
+      10
+    ], 
     "searchable": false, 
     "selectbyrectangle": false, 
     "serverLayerName": "ch.bazl.segelflugkarte", 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
     "timestamps": [
+      "20150305", 
       "20140306", 
       "20130307", 
       "20120308"
@@ -2614,7 +2745,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.energiestaedte", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2636,7 +2767,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.energiestaedte-2000watt-areale", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2658,7 +2789,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.energiestaedte-2000watt-aufdemweg", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -2680,7 +2811,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,dev,ech,inspire,wms-bgdi_prod", 
+    "topics": "api,ech,inspire,wms-bgdi_prod", 
     "type": "wms", 
     "wmsLayers": "ch.bfe.energiestaedte-energieregionen", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -3930,7 +4061,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "singleTile": false, 
     "timeBehaviour": "last", 
     "timeEnabled": false, 
-    "topics": "api,blw,ech,funksender,inspire,kgs,swissmaponline,swisstopo", 
+    "topics": "api,blw,ech,funksender,geol,inspire,kgs,swissmaponline,swisstopo", 
     "type": "wms", 
     "wmsLayers": "ch.swisstopo.swisstlm3d-karte-farbe.mapproxy,ch.kantone.cadastralwebmap-farbe", 
     "wmsUrl": "http://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.0.0"
@@ -4521,7 +4652,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20041231"
     ], 
-    "topics": "api,ech,inspire,swisstopo,wms-bgdi_prod", 
+    "topics": "api,ech,geol,inspire,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geoidmodell-etrs89": {
@@ -4554,7 +4685,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Eiszeitliches Maximum 500", 
+    "label": "Letzteiszeitl. Max. (Karte) 500", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -4575,7 +4706,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
-    "label": "GeoCover - Geol. Vektordatens\u00e4tze", 
+    "label": "GeoCover - Vektordaten", 
     "opacity": 0.75, 
     "queryable": true, 
     "resolutions": [
@@ -4624,7 +4755,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "gutter": 15, 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Einteilung GeoCover", 
+    "label": "Einteilung GeoCover / GA25", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4667,7 +4798,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Isostatische Anomalien", 
+    "label": "Isostatische Anomalien 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4699,7 +4830,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "20070425"
     ], 
-    "topics": "api,ech,geol,swisstopo,wms-bgdi_prod", 
+    "topics": "api,ech,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.geologie-geologische_karte": {
@@ -4710,7 +4841,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Geologische Karte 500", 
+    "label": "Geologie 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4732,7 +4863,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": false, 
     "highlightable": true, 
-    "label": "Geol. Atlas der Schweiz 1:25000", 
+    "label": "Geologischer Atlas GA25", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4755,7 +4886,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Aeromagnetik Voralpen/Jura", 
+    "label": "Aeromagnetik Mittelland/Jura 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4776,7 +4907,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Aeromagnetik", 
+    "label": "Aeromagnetik 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -4798,7 +4929,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Deklination", 
+    "label": "Deklination 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4820,7 +4951,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Geothermie", 
+    "label": "W\u00e4rmestromdichte 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4842,7 +4973,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Inklination", 
+    "label": "Inklination 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4864,7 +4995,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Magnetfeldst\u00e4rke", 
+    "label": "Magnetfeldst\u00e4rke 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -4886,7 +5017,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Geotechnik und Gesteine", 
+    "label": "Geotechnische Karte 200", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4908,7 +5039,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Entstehung der Gesteine", 
+    "label": "Entstehung der Gesteine 500", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4931,7 +5062,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Gesteinklassierung", 
+    "label": "Gesteinsklassen 500", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4954,7 +5085,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Lithologie-Hauptgruppen", 
+    "label": "Lithologie (Hauptgruppen) 500", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4977,7 +5108,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Mineralische Rohstoffe", 
+    "label": "Mineralische Rohstoffe 200", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": false, 
@@ -4999,7 +5130,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Steine an historischen Bauwerken", 
+    "label": "Steine an hist. Bauwerken", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -5042,7 +5173,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Gravimetrischer Atlas 1:100000", 
+    "label": "Gravimetrischer Atlas 100", 
     "queryable": false, 
     "searchable": false, 
     "selectbyrectangle": false, 
@@ -5063,7 +5194,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Einteilung gravimetrischer Atlas", 
+    "label": "Einteilung gravim. Atlas 100", 
     "opacity": 0.75, 
     "queryable": true, 
     "searchable": true, 
@@ -5151,7 +5282,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "format": "png", 
     "hasLegend": true, 
     "highlightable": true, 
-    "label": "Tektonische Karte 500", 
+    "label": "Tektonik 500", 
     "queryable": true, 
     "searchable": false, 
     "selectbyrectangle": true, 
@@ -5183,7 +5314,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "18650101"
     ], 
-    "topics": "api,ech,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
+    "topics": "api,ech,geol,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.hiks-siegfried": {
@@ -5232,7 +5363,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
     "timestamps": [
       "19260101"
     ], 
-    "topics": "api,ech,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
+    "topics": "api,ech,geol,inspire,ivs,kgs,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.images-swissimage.metadata": {
@@ -5352,7 +5483,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19901231", 
       "19891231"
     ], 
-    "topics": "api,ech,luftbilder,wms-bgdi_prod", 
+    "topics": "api,ech,geol,luftbilder,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-luftbilder-dritte-kantone": {
@@ -5385,7 +5516,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19631231", 
       "19621231"
     ], 
-    "topics": "api,ech,luftbilder,wms-bgdi_prod", 
+    "topics": "api,ech,geol,luftbilder,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-luftbilder_farbe": {
@@ -5436,7 +5567,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19821231", 
       "19811231"
     ], 
-    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
+    "topics": "api,ech,geol,luftbilder,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-luftbilder_infrarot": {
@@ -5485,7 +5616,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19831231", 
       "19811231"
     ], 
-    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
+    "topics": "api,ech,geol,luftbilder,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.lubis-luftbilder_schwarzweiss": {
@@ -5591,7 +5722,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "19271231", 
       "19261231"
     ], 
-    "topics": "api,ech,luftbilder,swisstopo,wms-bgdi_prod", 
+    "topics": "api,ech,geol,luftbilder,swisstopo,wms-bgdi_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.pixelkarte-farbe": {
@@ -5710,8 +5841,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20130903", 
       "20130213", 
       "20120809", 
-      "20111027", 
-      " "
+      "20111027"
     ], 
     "topics": "api,ech,gewiss,inspire,swissmaponline,swisstopo", 
     "type": "wmts"
@@ -5896,7 +6026,7 @@ var GeoAdmin=GeoAdmin || {}; GeoAdmin.getConfig=function(){ return {
       "20110101", 
       "20000101"
     ], 
-    "topics": "api,blw,ech,funksender,gewiss,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
+    "topics": "api,blw,ech,funksender,geol,gewiss,inspire,swissmaponline,swisstopo,wms-swisstopowms_prod", 
     "type": "wmts"
   }, 
   "ch.swisstopo.swissboundaries3d-bezirk-flaeche.fill": {
