@@ -11,11 +11,13 @@ cp build/EPSG* temp
 cp build/proj4js-com* temp
 cp build/*.png temp
 
-./build-ga.py apidoc
+
+make -f Makefile-ga apidoc
 cp -r build/hosted/master/apidoc temp
 
 git checkout gh-pages
 cp -r temp/* .
+git add apidoc
 rm -rf temp
 
 git status
