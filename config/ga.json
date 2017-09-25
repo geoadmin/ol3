@@ -16,10 +16,13 @@
       "externs/gax.js"
     ],
     "define": [
-      "goog.DEBUG=false"
+      "ol.DEBUG_WEBGL=false"
     ],
     "jscomp_error": [
       "*"
+    ],
+    "jscomp_warning": [
+      "deprecated"
     ],
     "jscomp_off": [
       "lintChecks",

@@ -1,7 +1,7 @@
 include Makefile
 
 .PHONY: build-ga
-build-ga: build/ga.css build/ga.js build/ga-debug.js build/ga.js.map
+build-ga: build/ga.css build/ga-debug.js build/ga.js build/ga.js.map
 
 build/ga.css: css/ga.css build/timestamps/node-modules-timestamp
 	@mkdir -p $(@D)

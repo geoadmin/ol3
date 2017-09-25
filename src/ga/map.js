@@ -6,6 +6,7 @@ goog.require('goog.ui.Menu');
 goog.require('goog.ui.MenuItem');
 goog.require('goog.dom');
 goog.require('goog.dom.classlist');
+goog.require('goog.html.SafeHtml')
 
 goog.require('ol.Map');
 goog.require('ol.View');
@@ -120,7 +121,6 @@ ga.Map = function(options) {
   this.geocoderDialog_.setModal(true);
   this.geocoderDialog_.setButtonSet(null);
 
-
   // gaTooltip
   this.gaTooltip_ = null;
   options.tooltip = goog.isDefAndNotNull(options.tooltip) ? options.tooltip : true;
@@ -156,7 +156,7 @@ ga.Map.prototype.handleGeocode_ = function(response) {
     this.recenterToResult_(response['results'][0]['attrs']);
   }
   if (response['results'].length > 1) {
-    this.showGeocoderDialog_(response['results']);  
+    this.showGeocoderDialog_(response['results']);
   }
 };
 
@@ -190,7 +190,7 @@ ga.Map.prototype.handleRecenterError_ = function() {
 
 ga.Map.prototype.recenterToFeature_ = function(feature) {
   var extent = feature['bbox'];
-  this.getView().fit(extent, /** @type {ol.Size} */ (this.getSize()));
+  this.getView().fit(extent,{ size: this.getSize()});
   if (this.getView().getZoom() > 7) {
     this.getView().setZoom(7);
   }
@@ -288,7 +288,7 @@ ga.Map.prototype.recenterToResult_ = function(resultItem) {
     this.getView().setCenter(center);
     this.addCross_(center);
   } else {
-    this.getView().fit(extent, /** @type {ol.Size} */ (this.getSize()));
+    this.getView().fit(extent,{ size: this.getSize()});
   }
 };
 
