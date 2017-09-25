@@ -18,7 +18,7 @@ var gax;
  *     loadTilesWhileInteracting: (boolean|undefined),
  *     logo: (boolean|string|olx.LogoOptions|undefined),
  *     overlays: (ol.Collection.<ol.Overlay>|Array.<ol.Overlay>|undefined),
- *     renderer: (ol.RendererType|Array.<ol.RendererType|string>|string|undefined),
+ *     renderer: (ol.renderer.Type|Array.<ol.renderer.Type|string>|string|undefined),
  *     target: (Element|string|undefined),
  *     tooltip: (boolean|undefined),
  *     view: (ol.View|undefined)}}
@@ -110,7 +110,7 @@ gax.MapOptions.prototype.overlays;
 
 /**
  * Renderer. Default to 'canvas'.
- * @type (ol.RendererType|Array.<ol.RendererType|string>|string|undefined) 
+ * @type (ol.renderer.Type|Array.<ol.renderer.Type|string>|string|undefined) 
  */
 gax.MapOptions.prototype.renderer;
 

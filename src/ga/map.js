@@ -1,11 +1,12 @@
 goog.provide('ga.Map');
 goog.provide('ol.View2D');
 
-goog.require('goog.ui.Dialog');
-goog.require('goog.ui.Menu');
-goog.require('goog.ui.MenuItem');
-goog.require('goog.dom');
-goog.require('goog.dom.classlist');
+//goog.require('goog.ui.Dialog');
+//goog.require('goog.ui.Menu');
+//goog.require('goog.ui.MenuItem');
+//goog.require('goog.dom');
+//goog.require('goog.dom.classlist');
+//goog.require('goog.html.SafeHtml')
 
 goog.require('ol.Map');
 goog.require('ol.View');
@@ -14,7 +15,7 @@ goog.require('ol.control.ScaleLine');
 goog.require('ol.interaction');
 goog.require('ol.net');
 goog.require('ol.proj');
-goog.require('ol.Overlay');
+//goog.require('ol.Overlay');
 goog.require('ol.format.GeoJSON');
 goog.require('ol.source.Vector');
 goog.require('ol.layer.Vector');
@@ -111,7 +112,7 @@ ga.Map = function(options) {
   this.serviceUrl = window['GeoAdmin']['serviceUrl'];
 
   // Geocoder
-  this.geocoderDialog_ = null;
+  /*this.geocoderDialog_ = null;
   this.geocoderList_ = null;
   this.geocoderCrossElement_ = null;
   this.geocoderOverlay_ = null;
@@ -119,7 +120,7 @@ ga.Map = function(options) {
   this.geocoderDialog_.setTitle(ga.Lang.translate('Geocoding results'));
   this.geocoderDialog_.setModal(true);
   this.geocoderDialog_.setButtonSet(null);
-
+  */
 
   // gaTooltip
   this.gaTooltip_ = null;
@@ -155,9 +156,9 @@ ga.Map.prototype.handleGeocode_ = function(response) {
   if (response['results'].length == 1) {
     this.recenterToResult_(response['results'][0]['attrs']);
   }
-  if (response['results'].length > 1) {
-    this.showGeocoderDialog_(response['results']);  
-  }
+  //if (response['results'].length > 1) {
+    //this.showGeocoderDialog_(response['results']);  
+  //}
 };
 
 ga.Map.prototype.handleGeocodeError_ = function() {
@@ -190,7 +191,7 @@ ga.Map.prototype.handleRecenterError_ = function() {
 
 ga.Map.prototype.recenterToFeature_ = function(feature) {
   var extent = feature['bbox'];
-  this.getView().fit(extent, /** @type {ol.Size} */ (this.getSize()));
+  this.getView().fit(extent,{ size: this.getSize()});
   if (this.getView().getZoom() > 7) {
     this.getView().setZoom(7);
   }
@@ -242,7 +243,7 @@ ga.Map.prototype.handleHighlightError_ = function() {
   alert("Highlighting failed. No feature found. Sorry for inconvenience.");
 };
 
-ga.Map.prototype.showGeocoderDialog_ = function(results) {
+/*ga.Map.prototype.showGeocoderDialog_ = function(results) {
   this.geocoderDialog_.setSafeHtmlContent(goog.html.SafeHtml.create('div', {'id': 'geocoderList'}));
   this.geocoderDialog_.setVisible(true); 
   this.geocoderList_ = new goog.ui.Menu();
@@ -263,12 +264,12 @@ ga.Map.prototype.showGeocoderDialog_ = function(results) {
 
 ga.Map.prototype.hideGeocoderDialog_ = function() {
   this.geocoderDialog_.setVisible(false);
-};
+};*/
 
 ga.Map.prototype.handleResultSelection_ = function(e) {
-  var resultItem = e.target.model_;
-  this.recenterToResult_(resultItem);
-  this.hideGeocoderDialog_();
+  //var resultItem = e.target.model_;
+  //this.recenterToResult_(resultItem);
+  //this.hideGeocoderDialog_();
 };
 
 ga.Map.prototype.recenterToResult_ = function(resultItem) {
@@ -288,7 +289,7 @@ ga.Map.prototype.recenterToResult_ = function(resultItem) {
     this.getView().setCenter(center);
     this.addCross_(center);
   } else {
-    this.getView().fit(extent, /** @type {ol.Size} */ (this.getSize()));
+    this.getView().fit(extent,{ size: this.getSize()});
   }
 };
 
@@ -302,20 +303,20 @@ ga.Map.prototype.parseExtent_ = function(stringBox2D) {
 };
 
 ga.Map.prototype.addCross_ = function(center) {
-  this.geocoderCrossElement_ = goog.dom.createDom(goog.dom.TagName.DIV);
-  goog.dom.classlist.addAll(this.geocoderCrossElement_, ['crosshair', 'cross']);
-  this.removeCross_();
-  this.geocoderOverlay_ = new ol.Overlay({
+  //this.geocoderCrossElement_ = goog.dom.createDom(goog.dom.TagName.DIV);
+  //goog.dom.classlist.addAll(this.geocoderCrossElement_, ['crosshair', 'cross']);
+  //this.removeCross_();
+  /*this.geocoderOverlay_ = new ol.Overlay({
     element: this.geocoderCrossElement_,
     position: center
   });
-  this.addOverlay(this.geocoderOverlay_);
+  this.addOverlay(this.geocoderOverlay_);*/
 };
 
 ga.Map.prototype.removeCross_ = function() {
-  if (this.geocoderOverlay_) {
+  /*if (this.geocoderOverlay_) {
     this.removeOverlay(this.geocoderOverlay_);
-  }
+  }*/
 };
 
 /**

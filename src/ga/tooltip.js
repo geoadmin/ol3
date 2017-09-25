@@ -1,7 +1,9 @@
 goog.provide('ga.Tooltip');
 
 goog.require('ol.Disposable');
+goog.require('ol.net');
 goog.require('ol.Overlay');
+goog.require('ol.Observable');
 goog.require('ol.events');
 goog.require('ol.layer.Vector');
 goog.require('ol.style.Circle');
