@@ -249,7 +249,7 @@ ga.Map.prototype.showGeocoderDialog_ = function(results) {
   for (var item in results) {
      this.geocoderList_.addChild(
        new goog.ui.MenuItem(results[item]['attrs']['label'].
-        replace('<b>','').replace('</b>',''),
+        replace('<b>','').replace('</b>','').
         replace('<i>','').replace('</i>',''),
         results[item]['attrs']),true);
   }
