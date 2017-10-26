@@ -25,7 +25,6 @@ List of version available:
 Publish a new version:
 
     $ aws --profile [s3_profile] s3 cp build s3://[bucket_name]/resources/api/4.3.2 --recursive --exclude "*" --include "ga.js" --include "ga-debug.js" --include "ga.css"
-    $ aws --profile [s3_profile] s3 cp build/css/ol.css s3://[bucket_name]/resources/api/4.3.2/
     $ aws --profile [s3_profile] s3 cp s3://[bucket_name]/resources/api/3.18.2/EPSG21781.js s3://[bucket_name]/resources/api/4.3.2/
     $ aws --profile [s3_profile] s3 cp s3://[bucket_name]/resources/api/3.18.2/EPSG2056.js  s3://[bucket_name]/resources/api/4.3.2/
 
