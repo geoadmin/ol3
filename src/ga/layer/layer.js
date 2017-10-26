@@ -70,7 +70,7 @@ ga.layer.create = function(layer, options) {
           source: ga.source.wms(layer, layerConfig),
           useInterimTilesOnError: false
         });
-      }     
+      }
     } else if (layerConfig.type == 'wmts') {
       olLayer = new ol.layer.Tile({
         minResolution: layerConfig.minResolution,
@@ -166,7 +166,7 @@ ga.layer.create = function(layer, options) {
     timeEnabled: {
       get: function() {
         return layerConfig['timeEnabled'];
-      }     
+      }
     },
     timestamps: {
       get: function() {
@@ -271,7 +271,7 @@ ga.source.wmts = function(layer, options) {
   });
   var extension = options.format || 'png';
   var timestamp = options['timestamp'] ? options['timestamp'] : options['timestamps'][0];
-  return new ol.source.WMTS( /** @type {olx.source.WMTSOptions} */({
+  return new ol.source.WMTS(/** @type {olx.source.WMTSOptions} */({
     crossOrigin: 'anonymous',
     attributions: [
       ga.layer.getAttribution('<a href="' +
@@ -280,7 +280,7 @@ ga.source.wmts = function(layer, options) {
         options['attribution'] + '</a>')
     ],
     url: ('http://wmts{5-9}.geo.admin.ch/1.0.0/{Layer}/default/{Time}/21781/' +
-        '{TileMatrix}/{TileRow}/{TileCol}.').replace('http:',location.protocol) + extension,
+        '{TileMatrix}/{TileRow}/{TileCol}.').replace('http:', location.protocol) + extension,
     tileGrid: tileGrid,
     layer: options['serverLayerName'] ? options['serverLayerName'] : layer,
     requestEncoding: 'REST',
@@ -314,7 +314,7 @@ ga.source.wms = function(layer, options) {
       'LAYERS': options['wmsLayers'] || layer,
       'TIME': options['timestamp']
     },
-    url: options['wmsUrl'].split('?')[0].replace('http:',location.protocol)
+    url: options['wmsUrl'].split('?')[0].replace('http:', location.protocol)
   });
 };
 
@@ -340,6 +340,6 @@ ga.source.imageWms = function(layer, options) {
       'TIME': options['timestamp']
     },
     ratio: 1,
-    url: options['wmsUrl'].split('?')[0].replace('http:',location.protocol)
+    url: options['wmsUrl'].split('?')[0].replace('http:', location.protocol)
   });
 };

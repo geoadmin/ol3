@@ -31,7 +31,7 @@ ga.style.StylesFromLiterals = function(properties) {
   /**
    * @type {Object}
    */
-  this.styles = {}
+  this.styles = {};
 
   this.styles['point'] = {};
   this.styles['line'] = {};
@@ -100,14 +100,14 @@ ga.style.StylesFromLiterals.prototype.getFeatureStyle = function(feature) {
     var properties = feature.getProperties();
     var value = properties[this.key];
     var geomType = getGeomTypeFromGeometry(
-      feature.getGeometry()
+        feature.getGeometry()
     );
     return this.styles[geomType][value];
   } else if (type === 'range') {
     var properties = feature.getProperties();
     var value = properties[this.key];
     var geomType = getGeomTypeFromGeometry(
-      feature.getGeometry()
+        feature.getGeometry()
     );
     return this.findOlStyleInRange_(value, geomType);
   }
@@ -180,7 +180,7 @@ ga.style.StylesFromLiterals.prototype.getOlBasicStyles_ = function(options) {
     } else if (type === 'text') {
       olStyles[type] = new ol.style.Text(style);
     }
-  };
+  }
   return olStyles;
 };
 
@@ -191,9 +191,9 @@ ga.style.StylesFromLiterals.prototype.getOlStyleFromLiterals_ = function(value) 
   var style = value['vectorOptions'];
   var geomType = value['geomType'];
   if (geomType === 'point') {
-      style = {
-        image: style
-      };
+    style = {
+      image: style
+    };
   }
   for (var key in style) {
     var olStyle = {};
@@ -218,6 +218,6 @@ ga.style.StylesFromLiterals.prototype.getOlStyleFromLiterals_ = function(value) 
         olStyles[k] = basicStyles[k];
       }
     }
-  };
+  }
   return new ol.style.Style(olStyles);
 };

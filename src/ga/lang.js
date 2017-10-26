@@ -12,7 +12,7 @@ ga.Lang = {};
  * @type {string}
  */
 ga.Lang.code_ = window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-  window['GeoAdmin']['lang'] : "de";
+  window['GeoAdmin']['lang'] : 'de';
 
 
 /**
@@ -105,8 +105,8 @@ ga.Lang.format = function(template, context, args) {
 
     if (typeof replacement == 'function') {
       replacement = args ?
-                    replacement.apply(null, args) :
-                    replacement();
+        replacement.apply(null, args) :
+        replacement();
     }
 
     // If replacement is undefined, return the string 'undefined'.

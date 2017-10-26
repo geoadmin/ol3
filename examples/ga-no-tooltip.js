@@ -32,7 +32,6 @@ var vector = new ol.layer.Vector({
 });
 
 
-
 //var lyr = ga.layer.create('ch.blw.alpprodukte');
 //var lyr = ga.layer.create('ch.bfs.gebaeude_wohnungs_register_wmts');
 //var lyr1 = ga.layer.create('ch.swisstopo.swissimage');

@@ -38,7 +38,7 @@ ga.Tooltip = function() {
    * @type {ol.Map}
    */
   this.map_ = null;
-  
+
   this.mapClickListenerKey_ = null;
 
   /**
@@ -60,7 +60,7 @@ ga.Tooltip = function() {
   this.vector_ = null;
 
   this.source_ = null;
-  
+
   this.createOverlay_();
 
 };
@@ -77,7 +77,7 @@ ga.Tooltip.prototype.createOverlay_ = function() {
   };
   this.tooltipContentElement_ = document.createElement('div');
   this.tooltipContentElement_.className =  className + '-content';
-  ol.events.listen(this.tooltipContentElement_ , 'mousewheel',
+  ol.events.listen(this.tooltipContentElement_, 'mousewheel',
       this.handleWheel_, this);
 
   var closeAnchor = document.createElement('a');
@@ -97,7 +97,7 @@ ga.Tooltip.prototype.createOverlay_ = function() {
   setPositionStyle(parentEl);
   window.onresize = function() {
     setPositionStyle(parentEl);
-  }
+  };
 };
 
 
@@ -118,7 +118,7 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
   this.overlay_.setPosition(coordinate);
   var size = this.map_.getSize();
   var extent = this.map_.getView().calculateExtent(/** @type {ol.Size} */ (size));
-    var layerList = new Array();
+  var layerList = new Array();
   var layer;
   for (var i = 0, ii = this.map_.getLayers().getArray().length; i < ii; i++) {
     layer = this.map_.getLayers().getArray()[i];
@@ -128,7 +128,7 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
   }
   if (layerList.length > 0 && this.enabled_) {
     ol.net.jsonp(
-      window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/identify' +
+        window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/identify' +
         '?geometryType=esriGeometryPoint' +
         '&geometry=' + coordinate[0] + ',' + coordinate[1] +
         '&geometryFormat=geojson' +
@@ -137,10 +137,10 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
         '&tolerance=10' +
         '&layers=all:' + layerList.join(',') +
         '&lang=' + (window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-          window['GeoAdmin']['lang'] : "de"),
-      this.handleIdentifyResponse_.bind(this),
-      this.handleIdentifyError_.bind(this),
-      'callback');
+          window['GeoAdmin']['lang'] : 'de'),
+        this.handleIdentifyResponse_.bind(this),
+        this.handleIdentifyError_.bind(this),
+        'callback');
   }
 };
 
@@ -171,7 +171,7 @@ ga.Tooltip.prototype.handleIdentifyResponse_ = function(response) {
             width: 3
           })
         })
-      })]
+      })];
     },
     source: this.source_
   });
@@ -183,15 +183,15 @@ ga.Tooltip.prototype.handleIdentifyResponse_ = function(response) {
   // Show popup
   for (var i = 0, ii = response['results'].length; i < ii; i++) {
     var lang = window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
-                window['GeoAdmin']['lang'] : "de";
+      window['GeoAdmin']['lang'] : 'de';
     ol.net.jsonp(
-      window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/' +
+        window['GeoAdmin']['serviceUrl'] + '/rest/services/api/MapServer/' +
         response['results'][i]['layerBodId'] + '/' +
         response['results'][i]['featureId'] + '/' +
         'htmlPopup?lang=' + lang,
-      this.handleHtmlpopupResponse_.bind(this),
-      this.handleHtmlpopupError_.bind(this),
-      'callback');
+        this.handleHtmlpopupResponse_.bind(this),
+        this.handleHtmlpopupError_.bind(this),
+        'callback');
   }
 };
 
@@ -202,13 +202,13 @@ ga.Tooltip.prototype.handleHtmlpopupResponse_ = function(response) {
 };
 
 ga.Tooltip.prototype.handleIdentifyError_ = function() {
-  alert("Unfortunately an error occured in tooltip identify. " +
-    "Sorry for inconvenience.");
+  alert('Unfortunately an error occured in tooltip identify. ' +
+    'Sorry for inconvenience.');
 };
 
 ga.Tooltip.prototype.handleHtmlpopupError_ = function() {
-  alert("Unfortunately an error occured in tooltip html popup. " +
-    "Sorry for inconvenience.");
+  alert('Unfortunately an error occured in tooltip html popup. ' +
+    'Sorry for inconvenience.');
 };
 
 ga.Tooltip.prototype.createFeatures_ = function(response) {
@@ -220,17 +220,17 @@ ga.Tooltip.prototype.createFeatures_ = function(response) {
     if (coords) {
       var geom;
 
-      switch(result.geometry.type) {
-        case 'Point': geom = new ol.geom.Point(coords);break;
-        case 'LineString': geom = new ol.geom.LineString(coords);break;
-        case 'Polygon': geom = new ol.geom.Polygon(coords);break;
-        case 'MultiPoint': geom = new ol.geom.MultiPoint(coords);break;
-        case 'MultiLineString': geom = new ol.geom.MultiLineString(coords);break;
-        case 'MultiPolygon': geom = new ol.geom.MultiPolygon(coords);break;
-        case 'GeometryCollection': geom = new ol.geom.GeometryCollection(coords);break;
+      switch (result.geometry.type) {
+        case 'Point': geom = new ol.geom.Point(coords); break;
+        case 'LineString': geom = new ol.geom.LineString(coords); break;
+        case 'Polygon': geom = new ol.geom.Polygon(coords); break;
+        case 'MultiPoint': geom = new ol.geom.MultiPoint(coords); break;
+        case 'MultiLineString': geom = new ol.geom.MultiLineString(coords); break;
+        case 'MultiPolygon': geom = new ol.geom.MultiPolygon(coords); break;
+        case 'GeometryCollection': geom = new ol.geom.GeometryCollection(coords); break;
         default: break;
       }
-      
+
       if (geom) {
         features.push(new ol.Feature({
           geometry: geom
@@ -259,7 +259,7 @@ ga.Tooltip.prototype.hidePopup = function() {
   if (this.vector_) {
     this.map_.removeLayer(this.vector_);
   }
-}; 
+};
 
 
 /**

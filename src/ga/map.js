@@ -138,18 +138,18 @@ goog.inherits(ga.Map, ol.Map);
  */
 ga.Map.prototype.geocode = function(text) {
   ol.net.jsonp(
-    this.serviceUrl + '/rest/services/api/SearchServer' +
+      this.serviceUrl + '/rest/services/api/SearchServer' +
       '?searchText=' + text +
       '&type=locations' +
-      '&lang='+ ga.Lang.getCode() +
+      '&lang=' + ga.Lang.getCode() +
       '&returnGeometry=true',
-    this.handleGeocode_.bind(this),
-    this.handleGeocodeError_.bind(this));
+      this.handleGeocode_.bind(this),
+      this.handleGeocodeError_.bind(this));
 };
 
 ga.Map.prototype.handleGeocode_ = function(response) {
   if (response['results'].length == 0) {
-    alert("Geocoding failed. No result has been found.");
+    alert('Geocoding failed. No result has been found.');
   }
   if (response['results'].length == 1) {
     this.recenterToResult_(response['results'][0]['attrs']);
@@ -160,7 +160,7 @@ ga.Map.prototype.handleGeocode_ = function(response) {
 };
 
 ga.Map.prototype.handleGeocodeError_ = function() {
-  alert("Geocoding failed. Sorry for inconvenience.");
+  alert('Geocoding failed. Sorry for inconvenience.');
 };
 
 /**
@@ -171,11 +171,11 @@ ga.Map.prototype.handleGeocodeError_ = function() {
  */
 ga.Map.prototype.recenterFeature = function(layerId, featureId) {
   ol.net.jsonp(
-    this.serviceUrl + '/rest/services/api/MapServer/' +
+      this.serviceUrl + '/rest/services/api/MapServer/' +
       layerId + '/' + featureId +
       '?geometryFormat=geojson',
-    this.handleRecenter_.bind(this), 
-    this.handleRecenterError_.bind(this));
+      this.handleRecenter_.bind(this),
+      this.handleRecenterError_.bind(this));
 };
 
 ga.Map.prototype.handleRecenter_ = function(response) {
@@ -184,12 +184,12 @@ ga.Map.prototype.handleRecenter_ = function(response) {
 };
 
 ga.Map.prototype.handleRecenterError_ = function() {
-  alert("Recentering failed. No feature found. Sorry for inconvenience.");
+  alert('Recentering failed. No feature found. Sorry for inconvenience.');
 };
 
 ga.Map.prototype.recenterToFeature_ = function(feature) {
   var extent = feature['bbox'];
-  this.getView().fit(extent,{ size: this.getSize()});
+  this.getView().fit(extent, {size: this.getSize()});
   if (this.getView().getZoom() > 7) {
     this.getView().setZoom(7);
   }
@@ -203,10 +203,10 @@ ga.Map.prototype.recenterToFeature_ = function(feature) {
  */
 ga.Map.prototype.highlightFeature = function(layerId, featureId) {
   ol.net.jsonp(
-    this.serviceUrl + '/rest/services/api/MapServer/' +
+      this.serviceUrl + '/rest/services/api/MapServer/' +
       layerId + '/' + featureId + '?geometryFormat=geojson',
-    this.handleHighlight_.bind(this), 
-    this.handleHighlightError_.bind(this));
+      this.handleHighlight_.bind(this),
+      this.handleHighlightError_.bind(this));
 };
 
 ga.Map.prototype.handleHighlight_ = function(response) {
@@ -238,7 +238,7 @@ ga.Map.prototype.handleHighlight_ = function(response) {
 };
 
 ga.Map.prototype.handleHighlightError_ = function() {
-  alert("Highlighting failed. No feature found. Sorry for inconvenience.");
+  alert('Highlighting failed. No feature found. Sorry for inconvenience.');
 };
 
 ga.Map.prototype.showGeocoderDialog_ = function(results) {
@@ -247,16 +247,16 @@ ga.Map.prototype.showGeocoderDialog_ = function(results) {
   this.geocoderList_ = new goog.ui.Menu();
   var geocoderListContainer = goog.dom.getElement('geocoderList');
   for (var item in results) {
-     this.geocoderList_.addChild(
-       new goog.ui.MenuItem(results[item]['attrs']['label'].
-        replace('<b>','').replace('</b>','').
-        replace('<i>','').replace('</i>',''),
-        results[item]['attrs']),true);
+    this.geocoderList_.addChild(
+        new goog.ui.MenuItem(results[item]['attrs']['label'].
+            replace('<b>', '').replace('</b>', '').
+            replace('<i>', '').replace('</i>', ''),
+        results[item]['attrs']), true);
   }
   this.geocoderList_.listen('action',
-    this.handleResultSelection_,
-    true,
-    this);
+      this.handleResultSelection_,
+      true,
+      this);
 
   this.geocoderList_.render(geocoderListContainer);
 };
@@ -281,24 +281,24 @@ ga.Map.prototype.recenterToResult_ = function(resultItem) {
     'gazetteer': '8'
   };
   if (originZoom.hasOwnProperty(origin)) {
-    var zoom = parseInt(originZoom[origin],10);
+    var zoom = parseInt(originZoom[origin], 10);
     var center = [(extent[0] + extent[2]) / 2,
       (extent[1] + extent[3]) / 2];
     this.getView().setZoom(zoom);
     this.getView().setCenter(center);
     this.addCross_(center);
   } else {
-    this.getView().fit(extent,{ size: this.getSize()});
+    this.getView().fit(extent, {size: this.getSize()});
   }
 };
 
 ga.Map.prototype.parseExtent_ = function(stringBox2D) {
   var extent = stringBox2D.replace('BOX(', '')
-    .replace(')', '').replace(',', ' ')
-    .split(' ');
-  extent = [parseFloat(extent[0]),parseFloat(extent[1]),
-    parseFloat(extent[2]),parseFloat(extent[3])];
-  return(extent);
+      .replace(')', '').replace(',', ' ')
+      .split(' ');
+  extent = [parseFloat(extent[0]), parseFloat(extent[1]),
+    parseFloat(extent[2]), parseFloat(extent[3])];
+  return (extent);
 };
 
 ga.Map.prototype.addCross_ = function(center) {

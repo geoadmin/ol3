@@ -94,7 +94,7 @@ $('.coordinates input').keyup(function() {
           [east, south],
           [east, north],
           [west, north]]]
-        );
+    );
 
     // Apply the new coordinates to the box
     overlay.getSource().clear();
