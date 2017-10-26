@@ -31,6 +31,7 @@ goog.require('ol.tilegrid.WMTS');
  * @api stable
  */
 ga.layer.create = function(layer, options) {
+  var swissExtent = [2420000, 1030000, 2900000, 1350000];
   if (layer in ga.layer.layerConfig) {
     var layerConfig = ga.layer.layerConfig[layer];
 
@@ -51,7 +52,8 @@ ga.layer.create = function(layer, options) {
         minResolution: layerConfig.minResolution,
         maxResolution: layerConfig.maxResolution,
         opacity: layerConfig.opacity,
-        layers: subLayers
+        layers: subLayers,
+        extent: swissExtent
       });
     } else if (layerConfig.type == 'wms') {
       if (layerConfig['singleTile']) {
@@ -59,7 +61,8 @@ ga.layer.create = function(layer, options) {
           minResolution: layerConfig.minResolution,
           maxResolution: layerConfig.maxResolution,
           opacity: layerConfig.opacity,
-          source: ga.source.imageWms(layer, layerConfig)
+          source: ga.source.imageWms(layer, layerConfig),
+          extent: swissExtent
         });
 
       } else {
@@ -68,7 +71,8 @@ ga.layer.create = function(layer, options) {
           maxResolution: layerConfig.maxResolution,
           opacity: layerConfig.opacity,
           source: ga.source.wms(layer, layerConfig),
-          useInterimTilesOnError: false
+          useInterimTilesOnError: false,
+          extent: swissExtent
         });
       }
     } else if (layerConfig.type == 'wmts') {
@@ -77,13 +81,15 @@ ga.layer.create = function(layer, options) {
         maxResolution: layerConfig.maxResolution,
         opacity: layerConfig.opacity,
         source: ga.source.wmts(layer, layerConfig),
-        useInterimTilesOnError: false
+        useInterimTilesOnError: false,
+        extent: swissExtent
       });
     } else if (layerConfig.type == 'geojson') {
       var geojsonFormat = new ol.format.GeoJSON();
       var olSource = new ol.source.Vector();
       olLayer = new ol.layer.Vector({
-        source: olSource
+        source: olSource,
+        extent: swissExtent
       });
       var setLayerStyle = function() {
         var xhr = new XMLHttpRequest();

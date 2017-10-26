@@ -61,7 +61,7 @@ ga.Map = function(options) {
   }
   options.renderer = renderer;
 
-  var swissExtent = [2420000, 130000, 2900000, 1350000];
+  var swissExtent = [2420000, 1030000, 2900000, 1350000];
   var swissProjection = ol.proj.get('EPSG:2056');
   swissProjection.setExtent(swissExtent);
 
