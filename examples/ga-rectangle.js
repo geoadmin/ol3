@@ -22,7 +22,7 @@ var map = new ga.Map({
   ],
   view: new ol.View({
     resolution: 500,
-    center: [660500, 186000],
+    center: [2660500, 1186000],
     zoom: 2
   })
 });

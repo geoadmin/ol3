@@ -16,8 +16,8 @@ var map = new ga.Map({
     // List of resolution of the WMTS layers:
     // 650, 500, 250, 100, 50, 20, 10, 5, 2.5, 2, 1, 0.5, 0.25, 0.1
     resolution: 100,
-    // Define a coordinate CH1903 for the center of the view
-    center: [791653.4904715178, 145041.76478935662]
+    // Define a coordinate LV95 for the center of the view
+    center: [2791653, 1145042]
   })
 });
 
@@ -25,9 +25,7 @@ var map = new ga.Map({
 var vector = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'data/kml/bln-style.kml',
-    format: new ol.format.KML({
-      projection: 'EPSG:21781'
-    })
+    format: new ol.format.KML()
   })
 });
 

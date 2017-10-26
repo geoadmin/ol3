@@ -13,8 +13,8 @@ var map = new ga.Map({
     // List of resolution of the WMTS layers:
     // 650, 500, 250, 100, 50, 20, 10, 5, 2.5, 2, 1, 0.5, 0.25, 0.1
     resolution: 10,
-    // Define a coordinate CH1903 for the center of the view
-    center: [561666.5, 185569.5]
+    // Define a coordinate LV95 for the center of the view
+    center: [2561666, 1185569]
   })
 });
 

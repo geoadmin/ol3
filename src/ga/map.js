@@ -35,7 +35,7 @@ goog.require('ga.Lang');
  *
  *     var map = new ga.Map({
  *       view: new ol.View({
- *         center: [600000, 200000]
+ *         center: [2600000,1200000]
  *       }),
  *       layers: [
  *         ga.layer.create('ch.swisstopo.pixelkarte-farbe')
@@ -45,7 +45,7 @@ goog.require('ga.Lang');
  *
  * The above snippet creates a map with a GeoAdmin layer on a 2D view and
  * renders it to a DOM element with the id 'map'.
- * The coordinate system EPSG:21781 is automatically set.
+ * The coordinate system EPSG:2056 is automatically set.
  *
  * @constructor
  * @extends {ol.Map}
@@ -61,8 +61,8 @@ ga.Map = function(options) {
   }
   options.renderer = renderer;
 
-  var swissExtent = [420000, 30000, 900000, 350000];
-  var swissProjection = ol.proj.get('EPSG:21781');
+  var swissExtent = [2420000, 130000, 2900000, 1350000];
+  var swissProjection = ol.proj.get('EPSG:2056');
   swissProjection.setExtent(swissExtent);
 
   var view = new ol.View({
@@ -71,7 +71,7 @@ ga.Map = function(options) {
     ],
     extent: swissExtent,
     projection: swissProjection,
-    center: [660000, 190000],
+    center: [2660000, 1190000],
     zoom: 0
   });
   if (goog.isDef(options.view)) {
@@ -141,8 +141,9 @@ ga.Map.prototype.geocode = function(text) {
       this.serviceUrl + '/rest/services/api/SearchServer' +
       '?searchText=' + text +
       '&type=locations' +
-      '&lang=' + ga.Lang.getCode() +
-      '&returnGeometry=true',
+      '&lang='+ ga.Lang.getCode() +
+      '&returnGeometry=true' +
+      '&sr=2056',
       this.handleGeocode_.bind(this),
       this.handleGeocodeError_.bind(this));
 };
@@ -173,7 +174,7 @@ ga.Map.prototype.recenterFeature = function(layerId, featureId) {
   ol.net.jsonp(
       this.serviceUrl + '/rest/services/api/MapServer/' +
       layerId + '/' + featureId +
-      '?geometryFormat=geojson',
+      '?geometryFormat=geojson' + '&sr=2056',
       this.handleRecenter_.bind(this),
       this.handleRecenterError_.bind(this));
 };
@@ -204,7 +205,8 @@ ga.Map.prototype.recenterToFeature_ = function(feature) {
 ga.Map.prototype.highlightFeature = function(layerId, featureId) {
   ol.net.jsonp(
       this.serviceUrl + '/rest/services/api/MapServer/' +
-      layerId + '/' + featureId + '?geometryFormat=geojson',
+      layerId + '/' + featureId + '?geometryFormat=geojson' +
+      '&sr=2056',
       this.handleHighlight_.bind(this),
       this.handleHighlightError_.bind(this));
 };
@@ -213,7 +215,7 @@ ga.Map.prototype.handleHighlight_ = function(response) {
   var features = [response['feature']];
   var parser = new ol.format.GeoJSON();
   var vectorSource = new ol.source.Vector({
-    projection: 'EPSG:21781',
+    projection: 'EPSG:2056',
     features: parser.readFeatures({
       type: 'FeatureCollection',
       features: features

@@ -229,7 +229,7 @@ ga.layer.layerConfig = (window.GeoAdmin) ? window.GeoAdmin.getConfig() : {};
 ga.layer.attributions = {};
 
 /**
- * Get the attribution 
+ * Get the attribution
  * @method
  * @param {string} text id of the Datenherr, i.e. 'ch.swisstopo'
  * @return {Object|null}
@@ -256,7 +256,7 @@ ga.layer.RESOLUTIONS = [
 
 /**
  * Create a WMTS source given a bod layer id
- * 
+ *
  * @method
  * @param {string} layer layer id.
  * @param {Object} options source options.
@@ -265,7 +265,7 @@ ga.layer.RESOLUTIONS = [
 ga.source.wmts = function(layer, options) {
   var resolutions = options.resolutions ? options.resolutions : ga.layer.RESOLUTIONS;
   var tileGrid = new ol.tilegrid.WMTS({
-    origin: [420000, 350000],
+    origin: [2420000, 1350000],
     resolutions: resolutions,
     matrixIds: goog.array.range(resolutions.length)
   });
@@ -279,8 +279,8 @@ ga.source.wmts = function(layer, options) {
         '" target="new">' +
         options['attribution'] + '</a>')
     ],
-    url: ('http://wmts{5-9}.geo.admin.ch/1.0.0/{Layer}/default/{Time}/21781/' +
-        '{TileMatrix}/{TileRow}/{TileCol}.').replace('http:', location.protocol) + extension,
+    url: ('http://wmts{5-9}.geo.admin.ch/1.0.0/{Layer}/default/{Time}/2056/' +
+        '{TileMatrix}/{TileCol}/{TileRow}.').replace('http:', location.protocol) + extension,
     tileGrid: tileGrid,
     layer: options['serverLayerName'] ? options['serverLayerName'] : layer,
     requestEncoding: 'REST',

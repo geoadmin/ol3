@@ -12,8 +12,7 @@ goog.require('ol.style.Text');
 var vector = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'data/cities.geojson',
-    format: new ol.format.GeoJSON(),
-    projection: 'EPSG:21781'
+    format: new ol.format.GeoJSON()
   }),
   style: function(feature, resolution) {
     var text = resolution < 251 ? feature.get('NAME') : '';
