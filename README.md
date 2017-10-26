@@ -18,6 +18,21 @@ Hosted example with compiled version : http://localhost:3000/build/hosted/master
 
 Hosted example with non-compiled version : http://localhost:3000/build/hosted/master/examples/ga-custom.html?mode=raw
 
+List of version available:
+
+    $ aws --profile [s3_profile] s3 ls s3://[bucket_name]/resources/api/
+
+Publish a new version:
+
+    $ aws --profile [s3_profile] s3 cp build s3://[bucket_name]/resources/api/4.3.2 --recursive --exclude "*" --include "ga.js" --include "ga-debug.js" --include "ga.css"
+    $ aws --profile [s3_profile] s3 cp build/css/ol.css s3://[bucket_name]/resources/api/4.3.2/
+    $ aws --profile [s3_profile] s3 cp s3://[bucket_name]/resources/api/3.18.2/EPSG21781.js s3://[bucket_name]/resources/api/4.3.2/
+    $ aws --profile [s3_profile] s3 cp s3://[bucket_name]/resources/api/3.18.2/EPSG2056.js  s3://[bucket_name]/resources/api/4.3.2/
+
+Delete a version:
+
+    $ aws --profile [s3_profile] s3 rm s3://[bucket_name]/resources/api/4.3.2 --recursive
+
 # OpenLayers 3
 
 [![Travis CI Status](https://secure.travis-ci.org/openlayers/openlayers.svg)](http://travis-ci.org/#!/openlayers/openlayers)
