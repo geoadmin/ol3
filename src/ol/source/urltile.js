@@ -5,6 +5,7 @@ goog.require('ol.TileState');
 goog.require('ol.TileUrlFunction');
 goog.require('ol.source.Tile');
 goog.require('ol.source.TileEventType');
+goog.require('ol.tilecoord');
 
 
 /**
@@ -29,7 +30,8 @@ ol.source.UrlTile = function(options) {
     state: options.state,
     tileGrid: options.tileGrid,
     tilePixelRatio: options.tilePixelRatio,
-    wrapX: options.wrapX
+    wrapX: options.wrapX,
+    transition: options.transition
   });
 
   /**
@@ -60,6 +62,12 @@ ol.source.UrlTile = function(options) {
   if (options.tileUrlFunction) {
     this.setTileUrlFunction(options.tileUrlFunction);
   }
+
+  /**
+   * @private
+   * @type {Object.<number, boolean>}
+   */
+  this.tileLoadingKeys_ = {};
 
 };
 ol.inherits(ol.source.UrlTile, ol.source.Tile);
@@ -110,21 +118,20 @@ ol.source.UrlTile.prototype.getUrls = function() {
  */
 ol.source.UrlTile.prototype.handleTileChange = function(event) {
   var tile = /** @type {ol.Tile} */ (event.target);
-  switch (tile.getState()) {
-    case ol.TileState.LOADING:
-      this.dispatchEvent(
-          new ol.source.Tile.Event(ol.source.TileEventType.TILELOADSTART, tile));
-      break;
-    case ol.TileState.LOADED:
-      this.dispatchEvent(
-          new ol.source.Tile.Event(ol.source.TileEventType.TILELOADEND, tile));
-      break;
-    case ol.TileState.ERROR:
-      this.dispatchEvent(
-          new ol.source.Tile.Event(ol.source.TileEventType.TILELOADERROR, tile));
-      break;
-    default:
-      // pass
+  var uid = ol.getUid(tile);
+  var tileState = tile.getState();
+  var type;
+  if (tileState == ol.TileState.LOADING) {
+    this.tileLoadingKeys_[uid] = true;
+    type = ol.source.TileEventType.TILELOADSTART;
+  } else if (uid in this.tileLoadingKeys_) {
+    delete this.tileLoadingKeys_[uid];
+    type = tileState == ol.TileState.ERROR ? ol.source.TileEventType.TILELOADERROR :
+      (tileState == ol.TileState.LOADED || tileState == ol.TileState.ABORT) ?
+        ol.source.TileEventType.TILELOADEND : undefined;
+  }
+  if (type != undefined) {
+    this.dispatchEvent(new ol.source.Tile.Event(type, tile));
   }
 };
 
@@ -149,6 +156,7 @@ ol.source.UrlTile.prototype.setTileLoadFunction = function(tileLoadFunction) {
  */
 ol.source.UrlTile.prototype.setTileUrlFunction = function(tileUrlFunction, opt_key) {
   this.tileUrlFunction = tileUrlFunction;
+  this.tileCache.pruneExceptNewestZ();
   if (typeof opt_key !== 'undefined') {
     this.setKey(opt_key);
   } else {
@@ -188,7 +196,7 @@ ol.source.UrlTile.prototype.setUrls = function(urls) {
  * @inheritDoc
  */
 ol.source.UrlTile.prototype.useTile = function(z, x, y) {
-  var tileCoordKey = this.getKeyZXY(z, x, y);
+  var tileCoordKey = ol.tilecoord.getKeyZXY(z, x, y);
   if (this.tileCache.containsKey(tileCoordKey)) {
     this.tileCache.get(tileCoordKey);
   }

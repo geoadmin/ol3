@@ -1,14 +1,13 @@
-// FIXME find correct globalCompositeOperation
-
 goog.provide('ol.renderer.canvas.TileLayer');
 
 goog.require('ol');
+goog.require('ol.LayerType');
 goog.require('ol.TileRange');
 goog.require('ol.TileState');
 goog.require('ol.ViewHint');
-goog.require('ol.array');
 goog.require('ol.dom');
 goog.require('ol.extent');
+goog.require('ol.renderer.Type');
 goog.require('ol.renderer.canvas.IntermediateCanvas');
 goog.require('ol.transform');
 
@@ -17,6 +16,7 @@ goog.require('ol.transform');
  * @constructor
  * @extends {ol.renderer.canvas.IntermediateCanvas}
  * @param {ol.layer.Tile|ol.layer.VectorTile} tileLayer Tile layer.
+ * @api
  */
 ol.renderer.canvas.TileLayer = function(tileLayer) {
 
@@ -81,6 +81,28 @@ ol.inherits(ol.renderer.canvas.TileLayer, ol.renderer.canvas.IntermediateCanvas)
 
 
 /**
+ * Determine if this renderer handles the provided layer.
+ * @param {ol.renderer.Type} type The renderer type.
+ * @param {ol.layer.Layer} layer The candidate layer.
+ * @return {boolean} The renderer can render the layer.
+ */
+ol.renderer.canvas.TileLayer['handles'] = function(type, layer) {
+  return type === ol.renderer.Type.CANVAS && layer.getType() === ol.LayerType.TILE;
+};
+
+
+/**
+ * Create a layer renderer.
+ * @param {ol.renderer.Map} mapRenderer The map renderer.
+ * @param {ol.layer.Layer} layer The layer to be rendererd.
+ * @return {ol.renderer.canvas.TileLayer} The layer renderer.
+ */
+ol.renderer.canvas.TileLayer['create'] = function(mapRenderer, layer) {
+  return new ol.renderer.canvas.TileLayer(/** @type {ol.layer.Tile} */ (layer));
+};
+
+
+/**
  * @private
  * @param {ol.Tile} tile Tile.
  * @return {boolean} Tile is drawable.
@@ -122,8 +144,7 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
     return false;
   }
 
-  var tileRange = tileGrid.getTileRangeForExtentAndResolution(
-      extent, tileResolution);
+  var tileRange = tileGrid.getTileRangeForExtentAndZ(extent, z);
   var imageExtent = tileGrid.getTileRangeExtent(z, tileRange);
 
   var tilePixelRatio = tileSource.getTilePixelRatio(pixelRatio);
@@ -157,23 +178,29 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
         tile = tile.getInterimTile();
       }
       if (this.isDrawableTile_(tile)) {
+        var uid = ol.getUid(this);
         if (tile.getState() == ol.TileState.LOADED) {
           tilesToDrawByZ[z][tile.tileCoord.toString()] = tile;
-          if (!newTiles && this.renderedTiles.indexOf(tile) == -1) {
+          var inTransition = tile.inTransition(uid);
+          if (!newTiles && (inTransition || this.renderedTiles.indexOf(tile) === -1)) {
             newTiles = true;
           }
         }
-        continue;
+        if (tile.getAlpha(uid, frameState.time) === 1) {
+          // don't look for alt tiles if alpha is 1
+          continue;
+        }
       }
 
-      var fullyLoaded = tileGrid.forEachTileCoordParentTileRange(
-          tile.tileCoord, findLoadedTiles, null, tmpTileRange, tmpExtent);
-      if (!fullyLoaded) {
-        var childTileRange = tileGrid.getTileCoordChildTileRange(
-            tile.tileCoord, tmpTileRange, tmpExtent);
-        if (childTileRange) {
-          findLoadedTiles(z + 1, childTileRange);
-        }
+      var childTileRange = tileGrid.getTileCoordChildTileRange(
+          tile.tileCoord, tmpTileRange, tmpExtent);
+      var covered = false;
+      if (childTileRange) {
+        covered = findLoadedTiles(z + 1, childTileRange);
+      }
+      if (!covered) {
+        tileGrid.forEachTileCoordParentTileRange(
+            tile.tileCoord, findLoadedTiles, null, tmpTileRange, tmpExtent);
       }
 
     }
@@ -201,7 +228,9 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
         canvas.width = width;
         canvas.height = height;
       } else {
-        context.clearRect(0, 0, width, height);
+        if (this.renderedExtent_ && !ol.extent.equals(imageExtent, this.renderedExtent_)) {
+          context.clearRect(0, 0, width, height);
+        }
         oversampling = this.oversampling_;
       }
     }
@@ -209,7 +238,15 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
     this.renderedTiles.length = 0;
     /** @type {Array.<number>} */
     var zs = Object.keys(tilesToDrawByZ).map(Number);
-    zs.sort(ol.array.numberSafeCompareFunction);
+    zs.sort(function(a, b) {
+      if (a === z) {
+        return 1;
+      } else if (b === z) {
+        return -1;
+      } else {
+        return a > b ? 1 : a < b ? -1 : 0;
+      }
+    });
     var currentResolution, currentScale, currentTilePixelSize, currentZ, i, ii;
     var tileExtent, tileGutter, tilesToDraw, w, h;
     for (i = 0, ii = zs.length; i < ii; ++i) {
@@ -226,7 +263,7 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
         y = (imageExtent[3] - tileExtent[3]) / tileResolution * tilePixelRatio / oversampling;
         w = currentTilePixelSize[0] * currentScale / oversampling;
         h = currentTilePixelSize[1] * currentScale / oversampling;
-        this.drawTileImage(tile, frameState, layerState, x, y, w, h, tileGutter);
+        this.drawTileImage(tile, frameState, layerState, x, y, w, h, tileGutter, z === currentZ);
         this.renderedTiles.push(tile);
       }
     }
@@ -269,15 +306,33 @@ ol.renderer.canvas.TileLayer.prototype.prepareFrame = function(frameState, layer
  * @param {number} w Width of the tile.
  * @param {number} h Height of the tile.
  * @param {number} gutter Tile gutter.
+ * @param {boolean} transition Apply an alpha transition.
  */
-ol.renderer.canvas.TileLayer.prototype.drawTileImage = function(tile, frameState, layerState, x, y, w, h, gutter) {
-  if (!this.getLayer().getSource().getOpaque(frameState.viewState.projection)) {
+ol.renderer.canvas.TileLayer.prototype.drawTileImage = function(tile, frameState, layerState, x, y, w, h, gutter, transition) {
+  var image = tile.getImage(this.getLayer());
+  if (!image) {
+    return;
+  }
+  var uid = ol.getUid(this);
+  var alpha = transition ? tile.getAlpha(uid, frameState.time) : 1;
+  if (alpha === 1 && !this.getLayer().getSource().getOpaque(frameState.viewState.projection)) {
     this.context.clearRect(x, y, w, h);
   }
-  var image = tile.getImage(this.getLayer());
-  if (image) {
-    this.context.drawImage(image, gutter, gutter,
-        image.width - 2 * gutter, image.height - 2 * gutter, x, y, w, h);
+  var alphaChanged = alpha !== this.context.globalAlpha;
+  if (alphaChanged) {
+    this.context.save();
+    this.context.globalAlpha = alpha;
+  }
+  this.context.drawImage(image, gutter, gutter,
+      image.width - 2 * gutter, image.height - 2 * gutter, x, y, w, h);
+
+  if (alphaChanged) {
+    this.context.restore();
+  }
+  if (alpha !== 1) {
+    frameState.animate = true;
+  } else if (transition) {
+    tile.endTransition(uid);
   }
 };
 

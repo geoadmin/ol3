@@ -16,10 +16,11 @@ goog.require('ol.events.EventType');
  * @param {string} src Image source URI.
  * @param {?string} crossOrigin Cross origin.
  * @param {ol.TileLoadFunctionType} tileLoadFunction Tile load function.
+ * @param {olx.TileOptions=} opt_options Tile options.
  */
-ol.ImageTile = function(tileCoord, state, src, crossOrigin, tileLoadFunction) {
+ol.ImageTile = function(tileCoord, state, src, crossOrigin, tileLoadFunction, opt_options) {
 
-  ol.Tile.call(this, tileCoord, state);
+  ol.Tile.call(this, tileCoord, state, opt_options);
 
   /**
    * Image URI
@@ -60,7 +61,7 @@ ol.inherits(ol.ImageTile, ol.Tile);
 ol.ImageTile.prototype.disposeInternal = function() {
   if (this.state == ol.TileState.LOADING) {
     this.unlistenImage_();
-    this.image_.src = ol.ImageTile.blankImage.toDataURL('image/png');
+    this.image_.src = ol.ImageTile.blankImageUrl;
   }
   if (this.interimTile) {
     this.interimTile.dispose();
@@ -97,7 +98,7 @@ ol.ImageTile.prototype.getKey = function() {
 ol.ImageTile.prototype.handleImageError_ = function() {
   this.state = ol.TileState.ERROR;
   this.unlistenImage_();
-  this.image_ = ol.ImageTile.blankImage;
+  this.image_.src = ol.ImageTile.blankImageUrl;
   this.changed();
 };
 
@@ -149,12 +150,12 @@ ol.ImageTile.prototype.unlistenImage_ = function() {
 
 
 /**
- * A blank image.
- * @type {HTMLCanvasElement}
+ * Data URI for a blank image.
+ * @type {string}
  */
-ol.ImageTile.blankImage = (function() {
+ol.ImageTile.blankImageUrl = (function() {
   var ctx = ol.dom.createCanvasContext2D(1, 1);
   ctx.fillStyle = 'rgba(0,0,0,0)';
   ctx.fillRect(0, 0, 1, 1);
-  return ctx.canvas;
+  return ctx.canvas.toDataURL('image/png');
 })();

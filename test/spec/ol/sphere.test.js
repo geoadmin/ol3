@@ -1,10 +1,14 @@
 // See http://www.movable-type.co.uk/scripts/latlong.html
 // FIXME add tests for offset
 
-goog.provide('ol.test.Sphere');
 
 goog.require('ol.Sphere');
 goog.require('ol.format.WKT');
+goog.require('ol.geom.GeometryCollection');
+goog.require('ol.geom.LineString');
+goog.require('ol.geom.MultiLineString');
+goog.require('ol.geom.MultiPoint');
+goog.require('ol.geom.Point');
 goog.require('ol.proj.EPSG4326');
 
 
@@ -172,7 +176,7 @@ describe('ol.Sphere.getLength()', function() {
     it('works for case ' + i, function() {
       var c = cases[i];
       var length = ol.Sphere.getLength(c.geometry, c.options);
-      expect(length).to.equal(c.length);
+      expect(length).to.roughlyEqual(c.length, 1e-8);
     });
   });
 

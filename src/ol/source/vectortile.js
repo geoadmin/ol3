@@ -4,10 +4,10 @@ goog.require('ol');
 goog.require('ol.TileState');
 goog.require('ol.VectorImageTile');
 goog.require('ol.VectorTile');
-goog.require('ol.proj');
 goog.require('ol.size');
-goog.require('ol.tilegrid');
 goog.require('ol.source.UrlTile');
+goog.require('ol.tilecoord');
+goog.require('ol.tilegrid');
 
 
 /**
@@ -52,7 +52,8 @@ ol.source.VectorTile = function(options) {
     tileUrlFunction: options.tileUrlFunction,
     url: options.url,
     urls: options.urls,
-    wrapX: options.wrapX === undefined ? true : options.wrapX
+    wrapX: options.wrapX === undefined ? true : options.wrapX,
+    transition: options.transition
   });
 
   /**
@@ -86,10 +87,6 @@ ol.source.VectorTile = function(options) {
    */
   this.tileGrids_ = {};
 
-  if (!this.tileGrid) {
-    this.tileGrid = this.getTileGridForProjection(ol.proj.get(options.projection || 'EPSG:3857'));
-  }
-
 };
 ol.inherits(ol.source.VectorTile, ol.source.UrlTile);
 
@@ -101,12 +98,20 @@ ol.source.VectorTile.prototype.getOverlaps = function() {
   return this.overlaps_;
 };
 
+/**
+ * clear {@link ol.TileCache} and delete all source tiles
+ * @api
+ */
+ol.source.VectorTile.prototype.clear = function() {
+  this.tileCache.clear();
+  this.sourceTiles_ = {};
+};
 
 /**
  * @inheritDoc
  */
 ol.source.VectorTile.prototype.getTile = function(z, x, y, pixelRatio, projection) {
-  var tileCoordKey = this.getKeyZXY(z, x, y);
+  var tileCoordKey = ol.tilecoord.getKeyZXY(z, x, y);
   if (this.tileCache.containsKey(tileCoordKey)) {
     return /** @type {!ol.Tile} */ (this.tileCache.get(tileCoordKey));
   } else {
@@ -122,7 +127,8 @@ ol.source.VectorTile.prototype.getTile = function(z, x, y, pixelRatio, projectio
         this.format_, this.tileLoadFunction, urlTileCoord, this.tileUrlFunction,
         this.tileGrid, this.getTileGridForProjection(projection),
         this.sourceTiles_, pixelRatio, projection, this.tileClass,
-        this.handleTileChange.bind(this));
+        this.handleTileChange.bind(this),
+        this.tileOptions);
 
     this.tileCache.set(tileCoordKey, tile);
     return tile;

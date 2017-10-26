@@ -47,7 +47,8 @@ ol.source.TileWMS = function(opt_options) {
     tileLoadFunction: options.tileLoadFunction,
     url: options.url,
     urls: options.urls,
-    wrapX: options.wrapX !== undefined ? options.wrapX : true
+    wrapX: options.wrapX !== undefined ? options.wrapX : true,
+    transition: options.transition
   });
 
   /**
@@ -79,13 +80,6 @@ ol.source.TileWMS = function(opt_options) {
    * @type {boolean}
    */
   this.hidpi_ = options.hidpi !== undefined ? options.hidpi : true;
-
-  /**
-   * @private
-   * @type {string}
-   */
-  this.coordKeyPrefix_ = '';
-  this.resetCoordKeyPrefix_();
 
   /**
    * @private
@@ -167,14 +161,6 @@ ol.source.TileWMS.prototype.getGetFeatureInfoUrl = function(coordinate, resoluti
  */
 ol.source.TileWMS.prototype.getGutterInternal = function() {
   return this.gutter_;
-};
-
-
-/**
- * @inheritDoc
- */
-ol.source.TileWMS.prototype.getKeyZXY = function(z, x, y) {
-  return this.coordKeyPrefix_ + ol.source.TileImage.prototype.getKeyZXY.call(this, z, x, y);
 };
 
 
@@ -274,24 +260,6 @@ ol.source.TileWMS.prototype.getTilePixelRatio = function(pixelRatio) {
 
 /**
  * @private
- */
-ol.source.TileWMS.prototype.resetCoordKeyPrefix_ = function() {
-  var i = 0;
-  var res = [];
-
-  if (this.urls) {
-    var j, jj;
-    for (j = 0, jj = this.urls.length; j < jj; ++j) {
-      res[i++] = this.urls[j];
-    }
-  }
-
-  this.coordKeyPrefix_ = res.join('#');
-};
-
-
-/**
- * @private
  * @return {string} The key for the current params.
  */
 ol.source.TileWMS.prototype.getKeyForParams_ = function() {
@@ -352,22 +320,12 @@ ol.source.TileWMS.prototype.fixedTileUrlFunction = function(tileCoord, pixelRati
 };
 
 /**
- * @inheritDoc
- */
-ol.source.TileWMS.prototype.setUrls = function(urls) {
-  ol.source.TileImage.prototype.setUrls.call(this, urls);
-  this.resetCoordKeyPrefix_();
-};
-
-
-/**
  * Update the user-provided params.
  * @param {Object} params Params.
  * @api
  */
 ol.source.TileWMS.prototype.updateParams = function(params) {
   ol.obj.assign(this.params_, params);
-  this.resetCoordKeyPrefix_();
   this.updateV13_();
   this.setKey(this.getKeyForParams_());
 };
