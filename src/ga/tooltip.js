@@ -135,6 +135,7 @@ ga.Tooltip.prototype.handleClick_ = function(mapBrowserEvent) {
         '&imageDisplay=' + size[0] + ',' + size[1] + ',96' +
         '&mapExtent=' + extent.join(',') +
         '&tolerance=10' +
+        '&sr=2056' +
         '&layers=all:' + layerList.join(',') +
         '&lang=' + (window['GeoAdmin'] && window['GeoAdmin']['lang'] ?
           window['GeoAdmin']['lang'] : 'de'),
