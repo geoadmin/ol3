@@ -147,7 +147,7 @@ ol.renderer.Layer.prototype.scheduleExpireCache = function(frameState, tileSourc
   if (tileSource.canExpireCache()) {
     /**
      * @param {ol.source.Tile} tileSource Tile source.
-     * @param {ol.Map} map Map.
+     * @param {ol.PluggableMap} map Map.
      * @param {olx.FrameState} frameState Frame state.
      */
     var postRenderFunction = function(tileSource, map, frameState) {
@@ -256,7 +256,7 @@ ol.renderer.Layer.prototype.manageTilePyramid = function(
   var tileQueue = frameState.tileQueue;
   var minZoom = tileGrid.getMinZoom();
   var tile, tileRange, tileResolution, x, y, z;
-  for (z = currentZ; z >= minZoom; --z) {
+  for (z = minZoom; z <= currentZ; ++z) {
     tileRange = tileGrid.getTileRangeForExtentAndZ(extent, z, tileRange);
     tileResolution = tileGrid.getResolution(z);
     for (x = tileRange.minX; x <= tileRange.maxX; ++x) {

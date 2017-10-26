@@ -9,6 +9,7 @@ goog.require('ol.events.EventType');
 goog.require('ol.proj');
 goog.require('ol.reproj.Tile');
 goog.require('ol.source.UrlTile');
+goog.require('ol.tilecoord');
 goog.require('ol.tilegrid');
 
 
@@ -39,7 +40,8 @@ ol.source.TileImage = function(options) {
     tileUrlFunction: options.tileUrlFunction,
     url: options.url,
     urls: options.urls,
-    wrapX: options.wrapX
+    wrapX: options.wrapX,
+    transition: options.transition
   });
 
   /**
@@ -52,7 +54,7 @@ ol.source.TileImage = function(options) {
   /**
    * @protected
    * @type {function(new: ol.ImageTile, ol.TileCoord, ol.TileState, string,
-   *        ?string, ol.TileLoadFunctionType)}
+   *        ?string, ol.TileLoadFunctionType, olx.TileOptions=)}
    */
   this.tileClass = options.tileClass !== undefined ?
     options.tileClass : ol.ImageTile;
@@ -222,7 +224,8 @@ ol.source.TileImage.prototype.createTile_ = function(z, x, y, pixelRatio, projec
       tileUrl !== undefined ? ol.TileState.IDLE : ol.TileState.EMPTY,
       tileUrl !== undefined ? tileUrl : '',
       this.crossOrigin,
-      this.tileLoadFunction);
+      this.tileLoadFunction,
+      this.tileOptions);
   tile.key = key;
   ol.events.listen(tile, ol.events.EventType.CHANGE,
       this.handleTileChange, this);
@@ -243,7 +246,7 @@ ol.source.TileImage.prototype.getTile = function(z, x, y, pixelRatio, projection
     var cache = this.getTileCacheForProjection(projection);
     var tileCoord = [z, x, y];
     var tile;
-    var tileCoordKey = this.getKeyZXY.apply(this, tileCoord);
+    var tileCoordKey = ol.tilecoord.getKey(tileCoord);
     if (cache.containsKey(tileCoordKey)) {
       tile = /** @type {!ol.Tile} */ (cache.get(tileCoordKey));
     }
@@ -291,7 +294,7 @@ ol.source.TileImage.prototype.getTile = function(z, x, y, pixelRatio, projection
  */
 ol.source.TileImage.prototype.getTileInternal = function(z, x, y, pixelRatio, projection) {
   var tile = null;
-  var tileCoordKey = this.getKeyZXY(z, x, y);
+  var tileCoordKey = ol.tilecoord.getKeyZXY(z, x, y);
   var key = this.getKey();
   if (!this.tileCache.containsKey(tileCoordKey)) {
     tile = this.createTile_(z, x, y, pixelRatio, projection, key);

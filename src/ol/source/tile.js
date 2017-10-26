@@ -71,6 +71,12 @@ ol.source.Tile = function(options) {
    */
   this.key_ = '';
 
+  /**
+   * @protected
+   * @type {olx.TileOptions}
+   */
+  this.tileOptions = {transition: options.transition};
+
 };
 ol.inherits(ol.source.Tile, ol.source.Source);
 
@@ -114,7 +120,7 @@ ol.source.Tile.prototype.forEachLoadedTile = function(projection, z, tileRange, 
   var tile, tileCoordKey, loaded;
   for (var x = tileRange.minX; x <= tileRange.maxX; ++x) {
     for (var y = tileRange.minY; y <= tileRange.maxY; ++y) {
-      tileCoordKey = this.getKeyZXY(z, x, y);
+      tileCoordKey = ol.tilecoord.getKeyZXY(z, x, y);
       loaded = false;
       if (tileCache.containsKey(tileCoordKey)) {
         tile = /** @type {!ol.Tile} */ (tileCache.get(tileCoordKey));
@@ -162,16 +168,6 @@ ol.source.Tile.prototype.setKey = function(key) {
     this.changed();
   }
 };
-
-
-/**
- * @param {number} z Z.
- * @param {number} x X.
- * @param {number} y Y.
- * @return {string} Key.
- * @protected
- */
-ol.source.Tile.prototype.getKeyZXY = ol.tilecoord.getKeyZXY;
 
 
 /**

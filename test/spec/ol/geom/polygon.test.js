@@ -1,4 +1,4 @@
-goog.provide('ol.test.geom.Polygon');
+
 
 goog.require('ol.extent');
 goog.require('ol.geom.Circle');
@@ -539,6 +539,17 @@ describe('ol.geom.Polygon', function() {
       expect(coordinates).to.eql([[[-1, -2], [5, -2], [5, 6], [-1, 6], [-1, -2]]]);
     });
 
+  });
+
+  describe('#getInteriorPoint', function() {
+
+    it('returns XYM point with intersection width as M', function() {
+      var geom = new ol.geom.Polygon([[[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]]);
+      var interiorPoint = geom.getInteriorPoint();
+      expect(interiorPoint.getType()).to.be('Point');
+      expect(interiorPoint.layout).to.be('XYM');
+      expect(interiorPoint.getCoordinates()).to.eql([0.5, 0.5, 1]);
+    });
   });
 
   describe('ol.geom.Polygon.fromExtent', function() {
